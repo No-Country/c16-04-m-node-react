@@ -1,28 +1,24 @@
-import {createBrowserRouter} from "react-router-dom"
-import {Home, PageOne, PageTwo, ErrorPage} from "../pages"
-import { Contact } from "../pages/Contact"
-
-
+import { createBrowserRouter } from "react-router-dom";
+import { Home, PageTwo, ErrorPage, Login } from "../pages";
+import { Contact } from "../pages/Contact";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
         //Se encarga de redireccionar a la página de error cuando no encuentra la URL.
-        errorElement:<ErrorPage/>
-
+        errorElement: <ErrorPage />,
     },
     {
-        path: "/pageOne",
-        element: <PageOne/>
+        path: "/Login",
+        element: <Login />,
     },
     {
         path: "/pageTwo",
-        element: <PageTwo/>
-    }, 
+        element: <PageTwo />,
+    },
     {
         path: "/Contact",
-        element: <Contact/> 
-    }
-
-])
+        element: <Contact />,
+    },
+]);

@@ -11,7 +11,6 @@ export const Home = () => {
             <NavBar/>
             <h1 className="text-center">Bienvenidos a Hiupy!</h1>
             
-            
         </>
     )
 };
