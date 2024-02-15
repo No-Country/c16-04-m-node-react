@@ -1,9 +1,12 @@
 import { NavBar } from "../components";
 import { Boton } from "../components/Boton/Boton.jsx";
-
-
+import { useSelector } from "react-redux"
+import { selectAllUsers } from "../store/slices";
 
 export const Home = () => {
+    const users = useSelector(selectAllUsers)
+    console.log(users)
+
     return (
         <>
             <NavBar/>
