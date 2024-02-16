@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 export const NavBar = () => {
     return (
         //Elemento ocultado temporalmente
-        
-        <div className="hidden">
+
+        <div>
             <ul className="flex flex-row gap-10 w-full justify-center mx-auto bg-sky-300">
                 <NavLink to="/">Home</NavLink>
 
