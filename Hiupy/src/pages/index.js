@@ -1,4 +1,4 @@
 export * from "./Home";
-export * from "./PageOne";
-export * from "./PageTwo"
+export * from "./Login";
+export * from "./LoadingPage"
 export * from "./ErrorPage"
