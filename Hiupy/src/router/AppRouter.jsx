@@ -1,6 +1,5 @@
 import {createBrowserRouter} from "react-router-dom"
-import {Home, PageOne, PageTwo, ErrorPage} from "../pages"
-import { Contact } from "../pages/Contact"
+import {Home, ErrorPage} from "../pages"
 
 
 
@@ -12,17 +11,10 @@ export const router = createBrowserRouter([
         errorElement:<ErrorPage/>
 
     },
-    {
+    {/*
         path: "/pageOne",
         element: <PageOne/>
-    },
-    {
-        path: "/pageTwo",
-        element: <PageTwo/>
-    }, 
-    {
-        path: "/Contact",
-        element: <Contact/> 
-    }
 
-])
+
+        Referencia*/}
+]);
