@@ -4,8 +4,10 @@ import { NavBar } from "../components";
 export const Login = () => {
     return (
         <>
-            <NavBar/>
+            {/* <NavBar/> */}
             <h1 className="text-center"><span className="font-bold">Hola</span>, ingresa a tu cuenta</h1>
+            
+            
         </>
     );
 };
