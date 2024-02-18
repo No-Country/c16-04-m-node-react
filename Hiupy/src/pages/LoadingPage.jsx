@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import logo  from "../images/logo.png";
+import logo from "../assets/images/logo.png";
 
 
 export const LoadingPage = () => {
@@ -16,7 +16,7 @@ export const LoadingPage = () => {
 
     return (
         <>
-            <div className="bg-[url('./images/fondoalimentos-1.png')] bg-cover 
+            <div className="bg-[url('../src/assets/images/fondoalimentos-1.png')] bg-cover 
             bg-center min-h-screen flex flex-col items-center justify-around">
 
                 <img src={logo} alt="Logo"/>

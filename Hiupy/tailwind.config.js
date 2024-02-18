@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins']  //instalacion de fuente poppins
+      },
+      colors: {
+        'dark-grey': '#A9A9A9',
       }
     },
   },

@@ -6,7 +6,7 @@ export const NavBar = () => {
 
         <div>
             <ul className="flex flex-row gap-10 w-full justify-center mx-auto bg-sky-300">
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/">Inicial</NavLink>
 
                 <NavLink to="/pageOne">PageOne</NavLink>
 

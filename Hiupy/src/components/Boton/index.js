@@ -1,1 +1,1 @@
-export * from "./Boton.jsx";
+export * from "./Boton";
