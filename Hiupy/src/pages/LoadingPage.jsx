@@ -7,7 +7,7 @@ export const LoadingPage = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            navigate("/home");
+            navigate("/Login");
         }, 3000);
 
         return () => clearTimeout(timer);
