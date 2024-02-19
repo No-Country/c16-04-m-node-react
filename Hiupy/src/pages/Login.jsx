@@ -1,10 +1,9 @@
-// import { NavBar } from "../components";
+ import { NavBar } from "../components";
 import { LoginForm } from "../components";
 
 export const Login = () => {
     return (
         <>
-            {/* <NavBar/> */}
             <div className="container p-8">
                 <h1 className="text-left text-xl font-poppins">
                     <span className="font-semibold text-3xl">Hola,</span>
@@ -12,6 +11,7 @@ export const Login = () => {
                 </h1>
                 <LoginForm/>
             </div>
+            <NavBar />
         </>
     );
 };

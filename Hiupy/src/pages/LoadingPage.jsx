@@ -7,7 +7,7 @@ export const LoadingPage = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            navigate("/login");
+            navigate("/Login");
         }, 3000);
 
         return () => clearTimeout(timer);
@@ -15,10 +15,10 @@ export const LoadingPage = () => {
 
     return (
         <>
-            <div className="bg-[url('/assets/fondoalimentos-1.png')] bg-cover 
+            <div className="bg-[url('/assets/images/fondoalimentos-1.png')] bg-cover 
             bg-center min-h-screen flex flex-col items-center justify-around">
 
-                <img src="/assets/logo.png" alt="Logo"/>
+                <img src="/assets/images/logo.png" alt="Logo"/>
 
                 <div className="flex flex-col gap-y-6 w-3/5">
 
