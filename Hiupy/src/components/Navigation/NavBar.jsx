@@ -11,6 +11,8 @@ export const NavBar = () => {
                 <NavLink to="/Login">Ingresar</NavLink>
 
                 <NavLink to="/pageTwo">PageTwo</NavLink>
+
+                <NavLink to="/Register">Registro</NavLink>
                 
                 {/*ALGO EN ESTE ELEMENTO ME DA SCROLL HORIZONTAL
                  <NavLink to="/contact">Contact</NavLink> */}
