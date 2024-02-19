@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import logo  from "../images/logo.png";
 
 
 export const LoadingPage = () => {
@@ -8,7 +7,7 @@ export const LoadingPage = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            navigate("/home");
+            navigate("/login");
         }, 3000);
 
         return () => clearTimeout(timer);
@@ -16,10 +15,10 @@ export const LoadingPage = () => {
 
     return (
         <>
-            <div className="bg-[url('../public/assets/fondoalimentos-1.png')] bg-cover 
+            <div className="bg-[url('/assets/fondoalimentos-1.png')] bg-cover 
             bg-center min-h-screen flex flex-col items-center justify-around">
 
-                <img src={logo} alt="Logo"/>
+                <img src="/assets/logo.png" alt="Logo"/>
 
                 <div className="flex flex-col gap-y-6 w-3/5">
 

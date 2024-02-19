@@ -9,7 +9,7 @@ export const Home = () => {
     return (
         <>
             <NavBar />
-            <h1 className="text-center">Bienvenidos a Hiupy!</h1>
+            <h1 className="text-center">ACA VA EL CODIGO DE JEAN! ACA SE LLEGA DESPUES DEL LOGIN</h1>
         </>
     );
 };
