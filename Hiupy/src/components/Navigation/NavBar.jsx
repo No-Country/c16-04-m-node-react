@@ -19,7 +19,7 @@ export const NavBar = () => {
                     <img src="/assets/images/nav-bar-menu.png" alt="menu-icon" />
                 </NavLink>
 
-                <NavLink to="/home"> 
+                <NavLink to="/Register"> 
                     <img src="/assets/images/vector/v-list.svg" alt="list-icon" />
                 </NavLink>
 
