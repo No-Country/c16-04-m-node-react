@@ -1,5 +1,3 @@
-
-
 export const SearchBar = () => {
     return (
         <div className=" flex w-full rounded-xl border border-light-grey justify-around">
