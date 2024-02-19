@@ -1,6 +1,9 @@
 import { NavBar } from "../components";
 import { useState } from "react";
 
+
+
+
 //Formulario
 export const Register = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +46,7 @@ export const Register = () => {
           name="nombre"
           value={formData.nombre}
           onChange={handleChange}
-          placeholder="Ingrese su nombre"
+          placeholder=" Ingrese su nombre "
         />
 
         <label>Correo electrónico:</label>
@@ -53,7 +56,7 @@ export const Register = () => {
           name="correo"
           value={formData.correo}
           onChange={handleChange}
-          placeholder="Ingrese su correo electronico"
+          placeholder=" Ingrese su correo electronico "
         />
 
         <label>Contraseña:</label>
@@ -63,7 +66,7 @@ export const Register = () => {
           name="contrasenia"
           value={formData.contrasenia}
           onChange={handleChange}
-          placeholder="Ingrese su contraseña"
+          placeholder=" Ingrese su contraseña "
         />
 
         <label>Confirma la contraseña:</label>
@@ -73,7 +76,7 @@ export const Register = () => {
           name="contrasenia"
           value={formData.contrasenia}
           onChange={handleChange}
-          placeholder="Ingrese su contraseña"
+          placeholder=" Ingrese su contraseña "
         />
         <label className="flex m-3 gap-2 ">
           <input
@@ -100,7 +103,28 @@ export const Register = () => {
           Registrate
         </button>
 
-        <label className="text-center"> O ingresa con tu cuenta: </label>
+        <label className="text-center text-gray-500">
+          {" "}
+          —— O ingresa con tu cuenta de ——
+        </label>
+        <div className="flex-row flex justify-around">
+          <button
+            className="w-14 h-14  text-white bg-af7d4d rounded-md shadow-2xl"
+            type="submit"
+          >
+         <img src="/assets/images/Facebook.png" />
+          </button>
+          <button
+            className="w-14 h-14 text-white bg-af7d4d rounded-md shadow-2xl"
+            type="submit"
+          >
+          <img src="/assets/images/GoogleLogo.png"/>
+          </button>
+        </div>
+        <div className=" flex gap-1 place-content-center">
+          <label className=" content-center">¿Ya tenés cuenta?</label>
+          <p className="text-orange-500 font-medium"> Ingresa </p>
+        </div>
       </form>
     </div>
   );
