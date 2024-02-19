@@ -1,5 +1,6 @@
-import { Boton, NavBar } from "../components";
+import { Boton, NavBar, SearchBar } from "../components";
 import Avatar from "../assets/images/Avatar.png"
+import comida from "../assets/images/comida.png"
 
 /*import { useSelector } from "react-redux"
 import { selectAllUsers } from "../store/slices";*/
@@ -12,27 +13,35 @@ export const Home = () => {
 
     return (
         <>
-            <div className="w-full px-6 font-poppins">
-                <div className="flex w-full justify-between pt-4">
-                    <div className="flex-col">
-                        <h2 className="font-semibold text-xl">Buenas noches usuario</h2>
-                        <span className="text-dark-grey text-xs">¿Cómo vamos a alimentarnos?</span>
+            <div className="w-full font-poppins box-border flex flex-col h-screen justify-between">
+                <div className="px-6 flex flex-col h-full gap-y-14">
+                    <div className="flex w-full justify-between pt-4">
+                        <div className="flex-col">
+                            <h2 className="font-semibold text-xl">Buenas noches usuario</h2>
+                            <span className="text-dark-grey text-xs">¿Cómo vamos a alimentarnos?</span>
+                        </div>
+                        <img src={Avatar} alt="Profile"/>
                     </div>
-                    <img src={Avatar} alt="Profile"/>
+
+                    <SearchBar />
+                    <div className="space-y-8">
+                        <Boton texto="Preparar o planificar nuestra comida" 
+                        etiqueta="Cocinar" fondo="#C7786C" ruta="/" />
+
+                        <Boton texto="Revisar qué alimentos disponemos" 
+                        etiqueta="Inventario" fondo="#CBCEB9" ruta="" />
+
+                        <Boton texto="Conseguir los ingredientes que faltan" 
+                        etiqueta="Lista de compras" fondo="#E2A748" ruta="" />
+                    </div>
+
+                    <img src={comida} alt="comida" />
                 </div>
-
-                <Boton texto="Preparar o planificar nuestra comida" 
-                etiqueta="Cocinar" fondo="#C7786C" ruta="/"/>
-
-                <Boton texto="Revisar qué alimentos disponemos" 
-                etiqueta="Inventario" fondo="#CBCEB9" ruta="" />
-
-                <Boton texto="Conseguir los ingredientes que faltan" 
-                etiqueta="Lista de compras" fondo="#E2A748" ruta="" />
-
+                <NavBar />
             </div>
 
-            <NavBar />
+            
+            
         </>
     )
 };

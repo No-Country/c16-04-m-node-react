@@ -9,7 +9,7 @@ export const Boton = (props) => {
     console.log(props);
     return (
         <div className="flex flex-col items-center">
-            <p className="text-sm">{texto}</p>
+            <p className="text-sm mb-2">{texto}</p>
                 <div className="boton w-full
                 rounded-lg text-center p-5 " 
                 style={{
