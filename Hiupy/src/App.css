@@ -3,3 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Setea poppins como el font-family por defecto en todo el HTML */
+@layer base {
+    html {
+      font-family: "poppins", system-ui, sans-serif;
+    }
+  }
+
