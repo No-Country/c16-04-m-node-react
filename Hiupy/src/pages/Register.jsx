@@ -75,7 +75,7 @@ export const Register = () => {
           onChange={handleChange}
           placeholder="Ingrese su contraseña"
         />
-        <label className="flex m-3 gap-2">
+        <label className="flex m-3 gap-2 ">
           <input
             type="checkbox"
             className="flex flex-row"
@@ -83,18 +83,18 @@ export const Register = () => {
             onChange={handleCheckboxChange}
           />
           {isChecked ? (
-            <p className="flex  text-orange-600">
+            <p className="flexe text-ff9c00">
               ¡Términos y condiciones aceptados!
             </p>
           ) : (
-            <p className="flex text-orange-600">
+            <p className="flex text-ff9c00">
               Acepto los términos y condiciones.
             </p>
           )}
         </label>
 
         <button
-          className="w-50 h-14 content-normal text-white bg-orange-800 rounded-md"
+          className="w-50 h-14 content-normal text-white bg-af7d4d rounded-md"
           type="submit"
         >
           Registrate
