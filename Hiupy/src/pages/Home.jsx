@@ -1,10 +1,4 @@
 import { Boton, NavBar, SearchBar } from "../components";
-import Avatar from "../assets/images/Avatar.png"
-import comida from "../assets/images/comida.png"
-
-/*import { useSelector } from "react-redux"
-import { selectAllUsers } from "../store/slices";*/
-
 
 
 export const Home = () => {
@@ -20,7 +14,7 @@ export const Home = () => {
                             <h2 className="font-semibold text-xl">Buenas noches usuario</h2>
                             <span className="text-dark-grey text-xs">¿Cómo vamos a alimentarnos?</span>
                         </div>
-                        <img src={Avatar} alt="Profile"/>
+                        <img src="/assets/images/Avatar.png" alt="Profile"/>
                     </div>
 
                     <SearchBar />
@@ -35,7 +29,7 @@ export const Home = () => {
                         etiqueta="Lista de compras" fondo="#E2A748" ruta="" />
                     </div>
 
-                    <img src={comida} alt="comida" />
+                    <img src="/assets/images/comida.png" alt="comida" />
                 </div>
                 <NavBar />
             </div>

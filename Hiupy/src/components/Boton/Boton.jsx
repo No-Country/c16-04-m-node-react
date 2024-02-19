@@ -10,18 +10,18 @@ export const Boton = (props) => {
     return (
         <div className="flex flex-col items-center">
             <p className="text-sm mb-2">{texto}</p>
-                <div className="boton w-full
-                rounded-lg text-center p-5 " 
-                style={{
-                    background: `${fondo}`
-                }}>
-                    <NavLink to={ruta} 
+
+                <NavLink to={ruta} 
                     className="text-white 
                     font-semibold text-xl w-full">
-                        {etiqueta}
-                    </NavLink>
 
-                </div>
+                    <div className="boton w-full
+                    rounded-lg text-center p-5 " 
+                    style={{background: `${fondo}`}}>  
+                        {etiqueta}
+                    </div>
+
+                </NavLink>
         </div>
     )
 };
