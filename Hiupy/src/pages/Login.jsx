@@ -10,6 +10,7 @@ export const Login = () => {
                     <br /> ingresa a tu cuenta
                 </h1>
                 <LoginForm/>
+                
             </div>
             <NavBar />
         </>

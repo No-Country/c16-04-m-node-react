@@ -2,7 +2,7 @@ export const LoginForm = () => {
     return (
         <>
             <section>
-                <form className="flex flex-col gap-1 my-12 ">
+                <form className="flex flex-col gap-1 my-12  ">
                     <legend className="text-sm">Correo Electrónico</legend>
                     <input
                         type="email"
@@ -31,22 +31,56 @@ export const LoginForm = () => {
                     mb-6"
                     ></input>
 
-                    <legend className="
+                    <legend
+                        className="
                     text-xs
                     text-amarillo-custom
-                    mb-6">
+                    mb-6"
+                    >
                         ¿Olvidaste la contraseña?
                     </legend>
                     <button
-                    className="
+                        className="
                     w-full
                     p-2
                     border-none
                     rounded-lg
                     bg-botones
                     text-white
-                    font-semibold">Ingresá</button>
+                    font-semibold"
+                    >
+                        Ingresá
+                    </button>
                 </form>
+            </section>
+            {/* Logeo alternativo */}
+            <section>
+                <div className="flex items-center gap-2">
+                    <hr className="flex-grow" />
+                    <span className="text-xs text-dark-grey">
+                        O ingresa con tu cuenta de:{" "}
+                    </span>
+                    <hr className="flex-grow" />
+                </div>
+                <div className="flex flex-row justify-evenly items-center my-4">
+                    <img
+                        src="/assets/google.png"
+                        className="rounded-lg shadow-black shadow-2xl	"
+                    ></img>
+
+                    <img
+                        src="/assets/facebook.png"
+                        className="rounded-lg shadow-black shadow-2xl	"
+                    ></img>
+                </div>
+                <div className="flex justify-center">
+                    <p className="text-xs font-semibold text-black">
+                        ¿Todavía no tenés cuenta?
+                        <span className="text-xs text-amarillo-custom">
+                            Registrate
+                        </span>
+                    </p>
+                </div>
             </section>
         </>
     );
