@@ -1,7 +1,10 @@
 /* eslint-disable no-undef */
-/** @type {import('tailwindcss').Config} */
+// @type {import('tailwindcss').Config}
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: [
+    "./src/**/*.{html,js,jsx}",
+    "node_modules/flowbite-react/lib/esm/**/*.js",
+],
   theme: {
     extend: {
       backgroundColor: {
@@ -24,5 +27,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [ require('flowbite/plugin')],
 };

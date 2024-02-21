@@ -9,7 +9,7 @@ export const Login = () => {
                     <span className="font-semibold text-3xl">Hola,</span>
                     <br /> ingresa a tu cuenta
                 </h1>
-                <LoginForm/>
+                <LoginForm />
             </div>
             {/* <NavBar /> */}
         </>
