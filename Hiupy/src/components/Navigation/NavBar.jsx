@@ -4,9 +4,10 @@ export const NavBar = () => {
         
     return (
 
+        //fixed bottom-0 left-0
         <div>
             <ul className=" fixed bottom-0 left-0 flex flex-row gap-10 
-            w-full mx-auto p-2 justify-around items-center border-2 bg-white">
+            w-full mx-auto py-8 justify-around items-center border-2 bg-white">
                 <NavLink to="/home"> 
                     <img src="/assets/images/vector/v-home.svg" alt="home-icon" />
                 </NavLink>
