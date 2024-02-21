@@ -1,7 +1,6 @@
-export const SearchBar = (props) => {
 /* eslint-disable react/prop-types */
+export const SearchBar = ({placeholder}) => {
 
-    const {placeholder} = props;
     return (
         <div className=" flex w-full rounded-xl border border-light-grey">
             <div className="self-center p-1">
