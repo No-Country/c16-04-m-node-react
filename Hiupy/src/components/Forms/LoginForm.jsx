@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 export const LoginForm = () => {
     return (
         <>
@@ -77,7 +79,7 @@ export const LoginForm = () => {
                     <p className="text-xs font-semibold text-black">
                         ¿Todavía no tenés cuenta?
                         <span className="text-xs text-amarillo-custom">
-                            Registrate
+                            <NavLink to="/Register">Registrate</NavLink>
                         </span>
                     </p>
                 </div>

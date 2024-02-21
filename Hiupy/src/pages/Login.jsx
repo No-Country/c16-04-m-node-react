@@ -5,7 +5,7 @@ export const Login = () => {
     return (
         <>
             <div className="container p-8">
-                <h1 className="text-left text-xl font-poppins">
+                <h1 className="text-left text-xl">
                     <span className="font-semibold text-3xl">Hola,</span>
                     <br /> ingresa a tu cuenta
                 </h1>

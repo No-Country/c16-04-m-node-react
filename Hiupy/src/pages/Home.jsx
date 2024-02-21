@@ -6,7 +6,8 @@ export const Home = () => {
     console.log(users) */
 
     return (
-        <>
+        <>  
+            <NavBar />
             <div className="w-full font-poppins box-border flex flex-col h-screen justify-between">
                 <div className="px-6 flex flex-col h-full gap-y-14">
                     <div className="flex w-full justify-between pt-4">
@@ -14,7 +15,6 @@ export const Home = () => {
                             <h2 className="font-semibold text-xl">Buenas noches usuario</h2>
                             <span className="text-dark-grey text-xs">¿Cómo vamos a alimentarnos?</span>
                         </div>
-                        <img src="/assets/images/Avatar.png" alt="Profile"/>
                     </div>
 
                     <SearchBar />
@@ -28,11 +28,9 @@ export const Home = () => {
                         <Boton texto="Conseguir los ingredientes que faltan" 
                         etiqueta="Lista de compras" fondo="#E2A748" ruta="" />
                     </div>
-
-                    <img src="/assets/images/comida.png" alt="comida" />
                 </div>
-                <NavBar />
             </div>
+            {/* FOOTER ACA */}
 
             
             
