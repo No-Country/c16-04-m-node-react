@@ -4,7 +4,7 @@ import { Avatar, Dropdown, Navbar } from "flowbite-react";
 
 export function NavBar() {
     return (
-        <Navbar className="bg-af7d4d w-full sticky" fluid >
+        <Navbar className="bg-af7d4d w-full sticky" fluid>
             <Navbar.Brand>
                 <img
                     src="/assets/logo.png"
@@ -37,14 +37,13 @@ export function NavBar() {
                     <Dropdown.Divider />
                     <Dropdown.Item>Sign out</Dropdown.Item>
                 </Dropdown>
-                <Navbar.Toggle />
+                {/*----------------- TOOGLE BUTTON ACÁ ---------------- */}
+                <Navbar.Toggle className="text-white hover:bg-af7d4d focus:ring-2 focus:ring-gray-700 " />
             </div>
             <Navbar.Collapse>
-                <Navbar.Link href="/home" active>
-                    Inicio
-                </Navbar.Link>
-                <Navbar.Link href="#">Inventario</Navbar.Link>
-                <Navbar.Link href="/recetas">Recetas</Navbar.Link>
+                <Navbar.Link href="/home" className="text-white">Inicio</Navbar.Link>
+                <Navbar.Link href="#" className="text-white">Inventario</Navbar.Link>
+                <Navbar.Link href="/recetas" className="text-white">Recetas</Navbar.Link>
             </Navbar.Collapse>
         </Navbar>
     );
