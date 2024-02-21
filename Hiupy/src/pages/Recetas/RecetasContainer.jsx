@@ -1,4 +1,4 @@
-import { NavBar, SearchBar } from "../../components";
+import { NavBar } from "../../components";
 import ListaRecetas from "./ListaRecetas";
 
 export const RecetasContainer = () => {
@@ -9,7 +9,7 @@ export const RecetasContainer = () => {
                     Estas son las recetas sugeridas con los ingredientes que
                     tenés en casa
                 </h2>
-                <SearchBar/>
+                {/* <SearchBar placeholder ={"Inserte el alimento que quiere agregar"}/> */}
                 <ListaRecetas/>
                 <NavBar/>
             </div>
