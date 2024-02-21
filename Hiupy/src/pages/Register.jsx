@@ -33,7 +33,7 @@ export const Register = () => {
 
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <form
         onSubmit={handleSubmit}
         className="flex flex-col text-left gap-2 m-10"
@@ -86,7 +86,7 @@ export const Register = () => {
             onChange={handleCheckboxChange}
           />
           {isChecked ? (
-            <p className="flexe text-ff9c00">
+            <p className="flex text-ff9c00">
               ¡Términos y condiciones aceptados!
             </p>
           ) : (

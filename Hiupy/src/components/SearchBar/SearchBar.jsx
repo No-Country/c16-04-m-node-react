@@ -4,7 +4,7 @@ export const SearchBar = () => {
             <div className=" self-center">
                 <img src="/assets/images/search.svg" alt="search-icon" />
             </div>
-            <input type="text" placeholder="Inserta ingredientes con los que quieras cocinar" className="placeholder:text-xs bg-transparent w-10/12 text-xs outline-none py-3" />
+            <input type="text" placeholder="Inserta ingredientes" className="placeholder:text-[11px] bg-transparent w-full h-[40px] text-[11px] outline-none py-3" />
         </div>
     )
 };
