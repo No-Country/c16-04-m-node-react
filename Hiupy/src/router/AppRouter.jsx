@@ -1,9 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-<<<<<<< HEAD
-import { Home, LoadingPage, ErrorPage, Login, Register, RecetasContainer } from "../pages";
-=======
 import { Home, LoadingPage, ErrorPage, Login, Register, RecipeList } from "../pages";
->>>>>>> 4352ac74a86d662e890142f21e2656fc18f8162c
 
 export const router = createBrowserRouter([
     {
@@ -28,12 +24,7 @@ export const router = createBrowserRouter([
 
     },
     {
-<<<<<<< HEAD
-        path: "/recetas",
-        element: <RecetasContainer/>
-=======
         path: "/List",
         element: <RecipeList />
->>>>>>> 4352ac74a86d662e890142f21e2656fc18f8162c
     }
 ]);

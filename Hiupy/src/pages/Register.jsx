@@ -34,10 +34,6 @@ export const Register = () => {
 
   return (
     <div>
-<<<<<<< HEAD
-      {/* <NavBar /> */}
-=======
->>>>>>> 4352ac74a86d662e890142f21e2656fc18f8162c
       <form
         onSubmit={handleSubmit}
         className="flex flex-col text-left gap-2 m-10"
