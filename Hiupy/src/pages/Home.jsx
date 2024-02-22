@@ -21,7 +21,7 @@ export const Home = () => {
 
                     <SearchBar
                         placeholder={
-                            "Inserta ingredientes con los que quieras cocinar"
+                            "Buscar ingredientes"
                         }
                     />
                     <div className="space-y-6">
@@ -29,7 +29,7 @@ export const Home = () => {
                             texto="Preparar o planificar nuestra comida"
                             etiqueta="Cocinar"
                             fondo="#C7786C"
-                            ruta="/"
+                            ruta="/Recipes"
                         />
 
                         <Boton

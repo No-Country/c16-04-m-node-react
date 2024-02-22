@@ -1,8 +1,9 @@
 export const RecipeItem = ({ receta }) => {
     return (
-        <>
-            <h2>{receta.nombre}</h2>
-            <p>{receta.descripcion}</p>
+        <>  
+            <img src={receta.img}/>
+            {/* <h2 className="font-bold uppercase">{receta.nombre}</h2>
+            <p>{receta.descripcion}</p> */}
         </>
     );
 };
