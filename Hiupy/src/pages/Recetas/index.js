@@ -1,1 +1,2 @@
-export * from "./RecetasContainer"
+export * from "./RecetasContainer";
+export * from "./RecipesCard";

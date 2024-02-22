@@ -1,7 +1,7 @@
 import { NavBar } from "../../components";
-import ListaRecetas from "./ListaRecetas";
+import ListaRecetas from "./RecipesList";
 
-export const RecetasContainer = () => {
+export const RecipesContainer = () => {
     return (
         <>
             <div className="container p-8">
