@@ -120,7 +120,7 @@ export const Register = () => {
         <div className=" flex gap-1 place-content-center">
           <label className=" content-center">¿Ya tenés cuenta?</label>
           <p className="text-orange-500 font-medium"> Ingresa </p>
-        </div>
+        </div>g
       </form>
     </div>
   );
