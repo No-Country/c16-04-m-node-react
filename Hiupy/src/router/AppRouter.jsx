@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, LoadingPage, ErrorPage, Login, Register } from "../pages";
+import { Home, LoadingPage, ErrorPage, Login, Register, RecipeList } from "../pages";
 
 export const router = createBrowserRouter([
     {
@@ -17,16 +17,14 @@ export const router = createBrowserRouter([
        
     },
     {
-        path: "/home",
+        path: "/Home",
         element: <Home/>,
         //Se encarga de redireccionar a la página de error cuando no encuentra la URL.
         errorElement:<ErrorPage/>
 
     },
-    {/*
-        path: "/pageOne",
-        element: <PageOne/>
-
-
-        Referencia*/}
+    {
+        path: "/List",
+        element: <RecipeList />
+    }
 ]);

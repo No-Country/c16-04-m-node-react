@@ -4,9 +4,9 @@ export const NavBar = () => {
         
     return (
 
-        //fixed bottom-0 left-0
+        //
         <div>
-            <ul className="  flex flex-row gap-10 
+            <ul className="top-0 left-0 flex flex-row gap-10 
             w-full mx-auto p-2 justify-around items-center border-2 bg-white">
                 <NavLink to="/home"> 
                     <img src="/assets/images/vector/v-home.svg" alt="home-icon" />
@@ -16,16 +16,13 @@ export const NavBar = () => {
                     <img src="/assets/images/vector/v-oven.svg" alt="oven-icon" />
                 </NavLink>
 
-                <NavLink to="/"> 
-                    <img src="/assets/images/nav-bar-menu.png" alt="menu-icon" />
-                </NavLink>
 
                 <NavLink to="/Register"> 
                     <img src="/assets/images/vector/v-list.svg" alt="list-icon" />
                 </NavLink>
 
                 <NavLink to="/home"> 
-                    <img src="/assets/images/vector/v-cart.svg" alt="cart-icon" />
+                    <img src="/assets/images/Avatar.png" alt="profile-icon" className=" w-9" />
                 </NavLink>
                 
 

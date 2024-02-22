@@ -21,6 +21,10 @@ module.exports = {
         'amarillo-custom': '#FF9C00',
         'botones': '#AF7D4D',
         'light-grey': '#D9D9D9'
+      },
+      fontSize: {
+        'mini': '8px',
+        '1xs': '11px'
       }
     },
   },
