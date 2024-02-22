@@ -1,14 +1,12 @@
-import { Boton, NavBar, SearchBar } from "../components";
+import { Boton, Footer, SearchBar } from "../components";
 
 
 export const Home = () => {
-    /* const users = useSelector(selectAllUsers)
-    console.log(users) */
-    const profileStyle = 'contain';
+    const profileStyle = 'contain'; //para mantener aspecto del perfil
 
     return (
         <>
-            <div className="w-full h-screen font-poppins box-border flex flex-col gap-y-4">
+            <div className="w-full h-screen font-poppins box-border flex flex-col">
                 <div className="px-6 flex flex-col h-full gap-y-8">
                     <div className="flex w-full pt-4">
                         <div className="w-full">
@@ -20,7 +18,7 @@ export const Home = () => {
                         }}/>
                     </div>
 
-                    <SearchBar placeholder="Inserta ingredientes con los que quieras cocinar" />
+                    <SearchBar placeholder={'Inserta ingredientes con los que quieras cocinar'} />
                     <div className="space-y-6">
                         <Boton texto="Preparar o planificar nuestra comida" 
                         etiqueta="Cocinar" fondo="#C7786C" ruta="/" />
@@ -32,7 +30,7 @@ export const Home = () => {
                         etiqueta="Lista de compras" fondo="#E2A748" ruta="" />
                     </div>
                 </div>
-                <NavBar />
+                <Footer />
             </div>
 
             

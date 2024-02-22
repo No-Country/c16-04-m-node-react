@@ -1,5 +1,6 @@
-import { NavBar } from "../components";
+
 import { useState } from "react";
+import { Footer } from "../components";
 
 
 
@@ -33,7 +34,10 @@ export const Register = () => {
 
   return (
     <div>
+<<<<<<< HEAD
       {/* <NavBar /> */}
+=======
+>>>>>>> 4352ac74a86d662e890142f21e2656fc18f8162c
       <form
         onSubmit={handleSubmit}
         className="flex flex-col text-left gap-2 m-10"
@@ -126,6 +130,7 @@ export const Register = () => {
           <p className="text-orange-500 font-medium"> Ingresa </p>
         </div>
       </form>
+      <Footer />
     </div>
   );
 };

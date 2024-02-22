@@ -1,5 +1,4 @@
-//  import { NavBar } from "../components";
-import { LoginForm } from "../components";
+import { Footer, LoginForm } from "../components";
 
 export const Login = () => {
     return (
@@ -12,7 +11,7 @@ export const Login = () => {
                 <LoginForm/>
                 {/* <NavBar /> */}
             </div>
-            {/* <NavBar /> */}
+            <Footer />
         </>
     );
 };
