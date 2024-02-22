@@ -24,6 +24,11 @@ export const router = createBrowserRouter([
         path: "/recetas",
         element: <RecetasContainer/>,
     },
+    {
+        path: "/CardReceta",
+        element: <CardReceta/>,
+    },
+
 
     {/*
         path: "/pageOne",
