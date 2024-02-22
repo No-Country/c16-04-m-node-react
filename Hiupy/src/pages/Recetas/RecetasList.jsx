@@ -1,6 +1,11 @@
-export const RecetasList = () => {
+import { Receta } from "./Receta"
+
+export const RecetasList = ({receta}) => {
+ 
   return (
-    <div>Aca se mapean las recetas</div>
+    <div>
+      <Receta receta={receta}/>
+    </div>
   )
 }
 
