@@ -7,6 +7,7 @@ export const SearchBar = ({placeholder}) => {
                 <img src="/assets/images/search.svg" alt="search-icon"  />
             </div>
             <input type="text" placeholder={placeholder} className="placeholder:text-xs bg-transparent w-10/12 text-xs outline-none py-3" />
+            <input type="text" placeholder={placeholder} className="placeholder:text-xs bg-transparent w-10/12 text-xs outline-none py-3" />
         </div>
     )
 };
