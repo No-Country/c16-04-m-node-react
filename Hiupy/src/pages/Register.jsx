@@ -1,5 +1,6 @@
-import { NavBar } from "../components";
+
 import { useState } from "react";
+import { Footer } from "../components";
 
 //Formulario
 export const Register = () => {
@@ -30,7 +31,6 @@ export const Register = () => {
 
   return (
     <div>
-      <NavBar />
       <form
         onSubmit={handleSubmit}
         className="flex flex-col text-left gap-2 m-10"
@@ -83,7 +83,7 @@ export const Register = () => {
             onChange={handleCheckboxChange}
           />
           {isChecked ? (
-            <p className="flexe text-ff9c00">
+            <p className="flex text-ff9c00">
               ¡Términos y condiciones aceptados!
             </p>
           ) : (
@@ -122,6 +122,7 @@ export const Register = () => {
           <p className="text-orange-500 font-medium"> Ingresa </p>
         </div>g
       </form>
+      <Footer />
     </div>
   );
 };

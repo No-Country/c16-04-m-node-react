@@ -4,9 +4,8 @@ import { NavLink } from "react-router-dom";
 
 export const Boton = (props) => {
 
-    const {texto, fondo, ruta, etiqueta} = props;  //nota: deconstruccion de props
+    const {texto, fondo, ruta, etiqueta} = props;  // nota: deconstruccion de props
 
-    console.log(props);
     return (
         <div className="flex flex-col items-center">
             <p className="text-sm mb-2">{texto}</p>
