@@ -48,19 +48,19 @@ Hiupy es una aplicación de inventario y planificación alimentaria. Junto a nos
 
 |  Lucas Id Betan  | Jean Polo  | Paula Gonzalez  |
 | ------------ | ------------ | ------------ |
-| <img src="https://i.ibb.co/WvfY0qY/lucasId.png" alt="lucasId" border="0" height="150px" width="150px"> | foto  | foto  |
+| <img src="https://i.ibb.co/WvfY0qY/lucasId.png" alt="lucasId" border="0" height="150px" width="150px" align="center">| <img src="https://i.ibb.co/X5vZ7P4/Jean.png" alt="Jean" border="0" height="180px" width="150px" align="center">| foto  |
 | Frontend  | Frontend  | Frontend  |
 | [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-id-betan-dev/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Lidbetan) | [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jeanpolo15/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jeanTULF) | [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paulatg/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PauTG) |
 
 | Valentina M. Profitos  | Facundo Chiabotto  |
 | ------------ | ------------ |
-|  <img src="https://i.ibb.co/dPddHyg/Logo-valen.png" alt="Logo-valen" border="0" height="150px" width="150px"> | foto  |
+| <img src="https://i.ibb.co/dPddHyg/Logo-valen.png" alt="Logo-valen" border="0" height="150px" width="150px" align="center">| <img src="https://i.ibb.co/PcNzfwk/Facu.png" alt="Facu" border="0" height="180px" width="150px" align="center">|
 | Backend  | Backend  |
 | [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/valentinaprofitos/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ValenProfitos)  | [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/facuch/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Facurro)  |
 
 | Pablo Ifantidis  | Angelo Biancotti  | David Gauthier  |
 | ------------ | ------------ | ------------ |
-| foto  | foto  | foto  |
+| <img src="https://i.ibb.co/84JtzLp/Pablo.png" alt="Pablo" border="0" height="150px" width="150px" align="center">| foto  | foto  |
 | PM - Full Stack  | Tester  | Diseñador UX-UI  |
 | [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pablo-ifantidis/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jikaidoko)  | [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/angelobiancotti/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AngeloBiancotti)  | [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-gauthier-/)   |
 
