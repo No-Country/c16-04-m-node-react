@@ -62,15 +62,15 @@ Hiupy es una aplicación de inventario y planificación alimentaria. Junto a nos
 
 | Valentina M. Profitos  | Facundo Chiabotto  |
 | ------------ | ------------ |
-| <img src="https://i.ibb.co/dPddHyg/Logo-valen.png" alt="Logo-valen" border="0" height="150px" width="150px" align="center">| <img src="https://i.ibb.co/PcNzfwk/Facu.png" alt="Facu" border="0" height="180px" width="150px" align="center">|
+| <img src="https://i.ibb.co/mDjtHqj/valen.jpg" alt="valen" border="0" height="200px" width="150px" align="center">| <img src="https://i.ibb.co/PcNzfwk/Facu.png" alt="Facu" border="0" height="180px" width="150px" align="center">|
 | Backend  | Backend  |
 | [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/valentinaprofitos/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ValenProfitos)  | [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/facuch/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Facurro)  |
 
 | Pablo Ifantidis  | Angelo Biancotti  | David Gauthier  |
 | ------------ | ------------ | ------------ |
-| <img src="https://i.ibb.co/84JtzLp/Pablo.png" alt="Pablo" border="0" height="150px" width="150px" align="center">| <img src="https://i.ibb.co/q5BHtkk/Foto-Angelo-CV.jpg" alt="Foto-Angelo-CV" border="0" width="200px" height="150px"> | foto  |
+| <img src="https://i.ibb.co/84JtzLp/Pablo.png" alt="Pablo" border="0" height="150px" width="150px" align="center">| <img src="https://i.ibb.co/q5BHtkk/Foto-Angelo-CV.jpg" alt="Foto-Angelo-CV" border="0" width="200px" height="150px"> | <img src="https://i.ibb.co/nMT625F/David.jpg" alt="David" border="0" width="200px" height="150px" align="center">|
 | PM - Full Stack  | Tester  | Diseñador UX-UI  |
-| [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pablo-ifantidis/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jikaidoko)  | [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/angelobiancotti/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AngeloBiancotti)  | [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-gauthier-/)   |
+| [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pablo-ifantidis/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jikaidoko)  | [![Linkedin](    https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/angelobiancotti/) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AngeloBiancotti)  | [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-gauthier-/) [![Behance](https://img.shields.io/badge/Behance-0054F7?style=for-the-badge&logo=behance&logoColor=white)](https://www.behance.net/davidgauthier) |
 
 <br/>
 
