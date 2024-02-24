@@ -52,6 +52,24 @@ Hiupy es una aplicación de inventario y planificación alimentaria. Junto a nos
 
 <br/>
 
+<!-- ### 📁 Organizacion de Carpetas
+
+- [Hiupy](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy)
+  - [contentlayer](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/.contentlayer)
+    -[generated](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/.contentlayer/generated)
+  - [backend](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/backend)
+    - [server](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/backend/server)
+      - [Router](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/backend/server/Router)
+      - [controller](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/backend/server/controller)
+      - [models](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/backend/server/models)
+  - [public](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/public)
+    - [assets](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/public/assets)
+      - [images](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/public/assets/images)
+        - [vector](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/public/assets/images/vector)
+  - [src](https://github.com/No-Country/c16-04-m-node-react/tree/testing/Hiupy/src)
+
+<br/> -->
+
 ## Team
 
 |  Lucas Id Betan  | Jean Polo  | Paula Gonzalez  |
