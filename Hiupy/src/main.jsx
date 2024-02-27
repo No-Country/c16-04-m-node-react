@@ -3,15 +3,14 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router/AppRouter.jsx";
-import { Provider } from "react-redux";
-import store from "./store/store.js";
+import RecipeContextProvider from "./context/RecipeContextProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <Provider store={store}>
+        <RecipeContextProvider>
             <RouterProvider router={router}>
                 <App />
             </RouterProvider>
-        </Provider>
+        </RecipeContextProvider>
     </React.StrictMode>
 );

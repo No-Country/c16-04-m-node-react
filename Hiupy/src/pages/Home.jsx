@@ -2,7 +2,7 @@
 import { Boton, Footer, SearchBar, NavBar } from "../components";
 
 export const Home = () => {
-    const profileStyle = "contain"; //para mantener aspecto del perfil
+    // const profileStyle = "contain"; //para mantener aspecto del perfil
 
     return (
         <>
