@@ -1,3 +1,4 @@
+// import { Carousel } from "flowbite-react";
 import { Boton, Footer, SearchBar, NavBar } from "../components";
 
 export const Home = () => {
@@ -6,7 +7,7 @@ export const Home = () => {
     return (
         <>
             <NavBar />
-            <div className="w-full font-poppins box-border flex flex-col h-screen justify-between">
+            <div className="w-full box-border flex flex-col h-screen justify-between">
                 <div className="px-6 flex flex-col h-full gap-y-14">
                     <div className="flex w-full justify-between pt-4">
                         <div className="flex-col">
@@ -19,11 +20,7 @@ export const Home = () => {
                         </div>
                     </div>
 
-                    <SearchBar
-                        placeholder={
-                            "Buscar ingredientes"
-                        }
-                    />
+                    <SearchBar placeholder={"Buscar ingredientes"} />
                     <div className="space-y-6">
                         <Boton
                             texto="Preparar o planificar nuestra comida"
@@ -46,9 +43,29 @@ export const Home = () => {
                             ruta=""
                         />
                     </div>
+                    {/* {/* <div className="w-3/4 h-full mx-auto">
+                        <Carousel
+                            onSlideChange={(index) =>
+                                console.log("onSlideChange()", index)
+                            }
+                        >
+                            <div className="flex flex-col items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+                                <img src="/public/assets/images/food-example.png" />{" "}
+                                Slide 1
+                            </div>
+                            <div className="flex flex-col items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+                                <img src="/public/assets/images/food-example.png" />{" "}
+                                Slide 2
+                            </div>
+                            <div className="flex flex-col items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
+                                <img src="/public/assets/images/food-example.png" />{" "}
+                                Slide 3
+                            </div>
+                        </Carousel> 
+                    </div> */}
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </>
     );
 };

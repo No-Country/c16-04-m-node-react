@@ -8,7 +8,7 @@ const useApiData = (url) => {
     useEffect(()=>{
         fetch(url)
         .then((res) => res.json())
-        .then((data) => setData(data))
+        .then((data) => setData(data.recetas))
         .catch((error) => setError(true))
         .finally(() => setLoading(false))
     }, [])
