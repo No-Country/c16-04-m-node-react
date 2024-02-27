@@ -33,7 +33,7 @@ export const Home = () => {
                             texto="Revisar qué alimentos disponemos"
                             etiqueta="Inventario"
                             fondo="#CBCEB9"
-                            ruta=""
+                            ruta="/Categories"
                         />
 
                         <Boton

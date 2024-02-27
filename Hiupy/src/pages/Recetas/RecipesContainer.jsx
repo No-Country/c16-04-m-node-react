@@ -2,14 +2,14 @@ import { Footer, NavBar, SearchBar } from "../../components";
 import { RecipesList } from "./RecipeList";
 // import useApiData from "../../Hooks/useApiData";
 import { useContext } from "react";
-import RecipeContext from "../../context/RecipesContext";
+import RecipeContext from "../../context/Recipes/RecipesContext";
 
 export const RecipesContainer = () => {
     //Custom hook que se encarga de manejar el fetch de datos.
     // const [data, loading, error] = useApiData("/src/data/recetas.json");
     // console.log("Console log: ", data);
-    const { data, loading, error } = useContext(RecipeContext)
-    console.log(data)
+    const { data, loading, error } = useContext(RecipeContext);
+    console.log(data);
 
     return (
         <>
@@ -23,13 +23,17 @@ export const RecipesContainer = () => {
                 <SearchBar placeholder={"Busca mas recetas"} />
             </div>
             <div className="grid grid-cols-2 gap-2 p-4">
-
                 {!loading && !error
                     ? data.map((item) => (
                           <RecipesList key={item.id} receta={item} />
                       ))
-                    : error && <><h2>Lo sentimos, parece que ha ocurrido un error</h2></>}
-                
+                    : error && (
+                          <>
+                              <h2>
+                                  Lo sentimos, parece que ha ocurrido un error
+                              </h2>
+                          </>
+                      )}
             </div>
             <Footer />
         </>
