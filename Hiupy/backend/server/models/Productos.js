@@ -1,6 +1,6 @@
 import sequelize from '../sequelize.js';
 import {DataTypes} from 'sequelize'
-//const Sequelize = new sequelize();
+;
 
 const Productos = sequelize.define('Productos', {
   // Modelo
