@@ -4,8 +4,8 @@
 
 import express, { json } from 'express';
 const app = express();
-import Productos from './models/Productos.js'
-import router from './Router/productoRouter.js';
+import Products from './models/Productos.js'
+import productoRouter from './Router/productoRouter.js';
 
 // Middleware para manejar solicitudes JSON
 app.use(express.json());
@@ -13,7 +13,7 @@ app.use(express.json());
 
 
 
-app.use('/', router)
+app.use('/', productoRouter)
 
 
 

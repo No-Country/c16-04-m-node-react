@@ -1,11 +1,11 @@
-import Productos from '../models/Productos.js';
+import Products from '../models/Productos.js';
 
 // Controlador para manejar las operaciones CRUD de productos
 
 // Obtener todos los productos
 async function getProducts(req, res) {
     try {
-        const products = await Productos.findAll();
+        const products = await Products.findAll();
         res.json(products);
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -19,8 +19,8 @@ async function createProduct(req, res) {
         return res.status(400).json({ message: 'No se proporcionaron datos en el cuerpo de la solicitud.' });
     }
     try {
-        const { Nombre, Categoria } = req.body;
-        const newProduct = await Productos.create({ Nombre, Categoria });
+        const { product_name, description, category, location } = req.body;
+        const newProduct = await Products.create({ product_name, description, category, location });
         res.status(201).json(newProduct);
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -41,10 +41,10 @@ async function createProduct(req, res) {
 
 // Actualizar un producto existente
 async function updateProduct(req, res) {
-    const { id } = req.params;
+    const { id_product } = req.params;
     try {
-        await Productos.update(req.body, {
-            where: { id }
+        await Products.update(req.body, {
+            where: { id_product }
         });
         res.status(200).json({ message: 'Producto actualizado correctamente.' });
     } catch (error) {
@@ -54,10 +54,10 @@ async function updateProduct(req, res) {
 
 // Eliminar un producto
 async function deleteProduct(req, res) {
-    const { id } = req.params;
+    const { id_product } = req.params;
     try {
-        await Productos.destroy({
-            where: { id }
+        await Products.destroy({
+            where: { id_product }
         });
         res.status(200).json({ message: 'Producto eliminado correctamente.' });
     } catch (error) {
