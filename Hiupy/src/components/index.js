@@ -1,2 +1,5 @@
 export * from "./Navigation"
-// export * from "./Reutilizables"
+export * from "./Boton"
+export * from "./SearchBar"
+export * from "./Forms"
+export * from "./Footer"
