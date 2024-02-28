@@ -9,7 +9,7 @@ export const RecipesContainer = () => {
     // const [data, loading, error] = useApiData("/src/data/recetas.json");
     // console.log("Console log: ", data);
     const { data, loading, error } = useContext(RecipeContext);
-    console.log(data);
+    // console.log(data);
 
     return (
         <>
@@ -25,7 +25,7 @@ export const RecipesContainer = () => {
             <div className="grid grid-cols-2 gap-2 p-4">
                 {!loading && !error
                     ? data.map((item) => (
-                          <RecipesList key={item.id} receta={item} />
+                          <RecipesList key={item.id_product} receta={item} />
                       ))
                     : error && (
                           <>
