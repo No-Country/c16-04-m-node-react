@@ -1,21 +1,33 @@
 import sequelize from '../sequelize.js';
 import {DataTypes} from 'sequelize'
-//const Sequelize = new sequelize();
+;
 
-const Productos = sequelize.define('Productos', {
+const Products = sequelize.define('products', {
   // Modelo
+    id_product: {
+          type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
 
-  Nombre: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
- Categoria: {
-    type: DataTypes.STRING
-    
-  }
+    product_name:{
+          type: DataTypes.STRING
+    },
+
+    description: {
+          type: DataTypes.STRING
+    },
+    category: {
+          type: DataTypes.ENUM,
+          values: ['frutas y verduras','otros','despensa','semillas y frutos secos','condimentos','carnes','lacteos y huevos','pasta y arroz','legumbres','conservas','panaderia y pasteleria']
+    },
+    location: {
+          type: DataTypes.ENUM,
+          values: ['alacena', 'huerta', 'heladera', 'freezer']
+    }
 }, )
 
 // logeo del modelo
 //console.log(User === sequelize.models.User); 
 
-export default Productos;
+export default Products;
