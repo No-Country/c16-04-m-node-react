@@ -4,9 +4,9 @@ import { getProducts, createProduct, updateProduct, deleteProduct } from '../con
 const router = express.Router();
 
 // Rutas para manejar las operaciones CRUD de productos
-router.get('/productos', getProducts);
-router.post('/productos', createProduct);
-router.put('/productos/:id', updateProduct);
-router.delete('/productos/:id', deleteProduct);
+router.get('/products', getProducts);
+router.post('/products', createProduct);
+router.put('/products/:id', updateProduct);
+router.delete('/products/:id', deleteProduct);
 
 export default router;

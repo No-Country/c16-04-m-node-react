@@ -1,10 +1,16 @@
 import {Sequelize} from 'sequelize';
 
 //Conectando a la BD
-const sequelize = new Sequelize('Hiupy', 'postgres', 'adidas10', {
-    host: 'localhost',
-    dialect: 'postgres'
-})
+const sequelize = new Sequelize(
+  "otbzbgfx",
+  "otbzbgfx",
+  "npjrcNk22j7sqY_bcnCAMgpOhoi5tLrM",
+  {
+    host: "silly.db.elephantsql.com",
+    port: 5432,
+    dialect: "postgresql",
+  }
+);
 //check de conexion
 try {
     await sequelize.authenticate();
