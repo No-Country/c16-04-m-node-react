@@ -25,7 +25,7 @@ export const RecipesContainer = () => {
             <div className="grid grid-cols-2 gap-2 p-4">
                 {!loading && !error
                     ? data.map((item) => (
-                          <RecipesList key={item.id_product} receta={item} />
+                          <RecipesList key={item.id_recipe} receta={item} />
                       ))
                     : error && (
                           <>
