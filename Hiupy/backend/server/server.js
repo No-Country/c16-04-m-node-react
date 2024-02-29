@@ -13,6 +13,7 @@ import productShoppingListRouter from './Router/productShoppingListRouter.js';
 
 const app = express();
 
+
 // Middleware para manejar solicitudes JSON
 app.use(express.json());
 
@@ -26,8 +27,10 @@ app.use('/api', userRouter);
 // Recetas
 app.use('/api', recipeRouter);
 
+
 // Lista de compras
 app.use('/api', shoppingListRouter);
+
 
 // Recetas y Productos
 app.use('/api', prodRecipeRouter);

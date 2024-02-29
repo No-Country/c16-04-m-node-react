@@ -1,6 +1,5 @@
-import {Sequelize} from 'sequelize';
+import { Sequelize } from "sequelize";
 
-//Conectando a la BD
 const sequelize = new Sequelize(
   "otbzbgfx",
   "otbzbgfx",
@@ -20,3 +19,6 @@ try {
   }
 
   export default sequelize
+
+
+  

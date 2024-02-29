@@ -1,11 +1,15 @@
 
 // syncModel.js
+
 import Products from './models/Productos.js';
 import User from './models/users.js';
 import Recipe from './models/recipes.js';
 import ShoppingList from './models/shoppingList.js';
 import ProductRecipes from './models/productsRecipes.js';
 import ProductShoppingList from './models/productShoppingList.js';
+import products_inventory from './models/products_inventory.js';
+import inventory from './models/inventory.js';
+
 import sequelize from './sequelize.js'; // Importa la instancia de Sequelize
 
 async function syncModel() {
