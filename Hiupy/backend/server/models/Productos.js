@@ -1,6 +1,6 @@
 import sequelize from '../sequelize.js';
 import {DataTypes} from 'sequelize'
-//const Sequelize = new sequelize();
+;
 
 const Products = sequelize.define('products', {
   // Modelo
@@ -28,6 +28,6 @@ const Products = sequelize.define('products', {
 }, )
 
 // logeo del modelo
-//console.log(User === sequelize.models.User); 
+//console.log(User === sequelize.models.User);
 
 export default Products;

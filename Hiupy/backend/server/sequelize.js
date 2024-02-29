@@ -1,5 +1,3 @@
-
-
 import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize(
@@ -12,10 +10,6 @@ const sequelize = new Sequelize(
     dialect: "postgresql",
   }
 );
-
-
-
-
 //check de conexion
 try {
     await sequelize.authenticate();

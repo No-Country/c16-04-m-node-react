@@ -54,14 +54,18 @@ export function NavBar() {
                 >
                     Inicio
                 </Navbar.Link>
+
                 <hr className="border-botones" />
+
                 <Navbar.Link
-                    href="#"
+                    href="/Categories"
                     className="text-black font-semibold text-sm"
                 >
                     Inventario
                 </Navbar.Link>
+
                 <hr className="border-botones" />
+
                 <Navbar.Link
                     href="/Recipes"
                     className="text-black font-semibold text-sm"
@@ -71,5 +75,6 @@ export function NavBar() {
                 <hr className="border-botones" />
             </Navbar.Collapse>
         </Navbar>
+        
     );
 }
