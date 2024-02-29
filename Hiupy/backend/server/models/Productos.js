@@ -28,6 +28,6 @@ const Products = sequelize.define('products', {
 }, )
 
 // logeo del modelo
-//console.log(User === sequelize.models.User); 
+//console.log(User === sequelize.models.User);
 
 export default Products;

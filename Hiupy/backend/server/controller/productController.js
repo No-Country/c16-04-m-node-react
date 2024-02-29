@@ -1,5 +1,4 @@
 import Products from '../models/Productos.js';
-
 // Controlador para manejar las operaciones CRUD de productos
 
 // Obtener todos los productos
@@ -35,9 +34,6 @@ async function createProduct(req, res) {
 //        res.status(400).json({ message: error.message });
 //    }
 //}
-
-
-
 
 // Actualizar un producto existente
 async function updateProduct(req, res) {
