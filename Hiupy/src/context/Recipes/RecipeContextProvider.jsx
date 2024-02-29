@@ -3,9 +3,10 @@ import useApiData from "../../Hooks/useApiData";
 
 const RecipeContextProvider = ({ children }) => {
     const [data, loading, error] = useApiData(
-        "http://localhost:3000/productos"
-    );
-    // console.log("Console log : ", data);
+       " /src/data/recetas.json"
+        );
+        // "http://localhost:3000/productos"
+        // console.log("Console log : ", data);
 
     const values = {
         data,

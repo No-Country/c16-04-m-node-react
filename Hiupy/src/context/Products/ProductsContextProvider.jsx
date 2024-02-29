@@ -2,14 +2,9 @@ import ProductsContext from "./ProductsContext";
 import useApiData from "../../Hooks/useApiData";
 
 const ProductsContextProvider = ({ children }) => {
-
-
-    const [data, loading, error] = useApiData(
-        "http://localhost:3000/productos"
-    );
-    // "/src/data/productos.json"
+    const [data, loading, error] = useApiData("http://localhost:3000/api/productos");
     // console.log("Console log : ", data);
-
+    // "/src/data/productos.json"
     //Método que se encarga de filtrar los productos del congelador
     const getProductosCongelador = () => {
         const freezer = data.filter(
@@ -49,8 +44,6 @@ const ProductsContextProvider = ({ children }) => {
         return huerta;
     };
     getProductosHuerta();
-
-
 
     const values = {
         data,
