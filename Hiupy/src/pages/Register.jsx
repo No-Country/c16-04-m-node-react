@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Footer } from "../components";
 
@@ -8,7 +7,61 @@ export const Register = () => {
     nombre: "",
     correo: "",
     contrasenia: "",
+    confirmarContrasenia: "",
   });
+
+  const [errors, setError] = useState({});
+
+  const onValidate = (formData) => {
+    let isError = false;
+    let errors = {};
+    let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+    let regexP =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
+
+    if (!formData.nombre.trim()) {
+      errors.nombre = "El campo nombre no debe estar vacio";
+      isError = true;
+    } else if (!regexName.test(formData.nombre)) {
+      errors.nombre = "el campo nombre solo acepta letras y espacios";
+      isError = true;
+    }
+
+    if (!formData.correo.trim()) {
+      errors.correo = "El campo correo no debe estar vacio";
+      isError = true;
+    } else if (!regexEmail.test(formData.correo)) {
+      errors.correo = "el campo correo tiene un formato no valido";
+      isError = true;
+    }
+
+    if (!formData.contrasenia.trim()) {
+      errors.contrasenia = "El campo contrasenia no debe estar vacio";
+      isError = true;
+    } else if (!regexP.test(formData.contrasenia)) {
+      errors.contrasenia =
+        "Debe ser minimo 8 caracteres, una letra mayuscula y un caracter especial";
+      isError = true;
+    }
+
+    if (!formData.confirmarContrasenia.trim()) {
+      errors.confirmarContrasenia =
+        "El campo confirmar contrasenia no debe estar vacio";
+      isError = true;
+    } else if (!regexP.test(formData.confirmarContrasenia)) {
+      errors.confirmarContrasenia =
+        "el campo nombre solo acepta letras y espacios";
+      isError = true;
+    }
+
+    if (formData.contrasenia !== formData.confirmarContrasenia) {
+      errors.confirmarContrasenia = "Las contraseñas no coinciden";
+      isError = true;
+    }
+
+    return isError ? errors : null;
+  };
 
   const [isChecked, setIsChecked] = useState(false);
 
@@ -18,14 +71,26 @@ export const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Puedes realizar acciones adicionales aquí si es necesario
-    console.log("Formulario enviado");
+    const err = onValidate(formData);
+
+    if (err == null) {
+      console.log("Enviando formulario");
+    } else {
+      setError(err);
+    }
   };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
+    });
+    setError({
+      ...errors,
+      nombre: "",
+      correo: "",
+      confirmarContrasenia: "",
+      contrasenia: "",
     });
   };
 
@@ -45,6 +110,7 @@ export const Register = () => {
           onChange={handleChange}
           placeholder="Ingrese su nombre"
         />
+        {errors.nombre && <p className="text-red-500">{errors.nombre}</p>}
 
         <label>Correo electrónico:</label>
         <input
@@ -55,6 +121,7 @@ export const Register = () => {
           onChange={handleChange}
           placeholder="Ingrese su correo electronico"
         />
+        {errors.correo && <p className="text-red-500">{errors.correo}</p>}
 
         <label>Contraseña:</label>
         <input
@@ -65,16 +132,22 @@ export const Register = () => {
           onChange={handleChange}
           placeholder="Ingrese su contraseña"
         />
+        {errors.contrasenia && (
+          <p className="text-red-500">{errors.contrasenia}</p>
+        )}
 
         <label>Confirma la contraseña:</label>
         <input
           className="border-2 h-10 border-gray-200 rounded-md"
           type="password"
-          name="contrasenia"
-          value={formData.contrasenia}
+          name="confirmarContrasenia"
+          value={formData.confirmarContrasenia}
           onChange={handleChange}
           placeholder="Ingrese su contraseña"
         />
+        {errors.confirmarContrasenia && (
+          <p className="text-red-500">{errors.confirmarContrasenia}</p>
+        )}
         <label className="flex m-3 gap-2 ">
           <input
             type="checkbox"
@@ -108,19 +181,19 @@ export const Register = () => {
             className="w-14 h-14  text-white bg-af7d4d rounded-md shadow-2xl"
             type="submit"
           >
-         <img src="/assets/images/Facebook.png" />
+            <img src="/assets/images/Facebook.png" />
           </button>
           <button
             className="w-14 h-14 text-white bg-af7d4d rounded-md shadow-2xl"
             type="submit"
           >
-          <img src="/assets/images/GoogleLogo.png"/>
+            <img src="/assets/images/GoogleLogo.png" />
           </button>
         </div>
         <div className=" flex gap-1 place-content-center">
           <label className=" content-center">¿Ya tenés cuenta?</label>
           <p className="text-orange-500 font-medium"> Ingresa </p>
-        </div>g
+        </div>
       </form>
       <Footer />
     </div>
