@@ -4,6 +4,7 @@
 
 import express, { json } from 'express';
 const app = express();
+//import recipesRouter from './Router/recipesRouter.js';
 import Products from './models/Productos.js'
 import productoRouter from './Router/productoRouter.js';
 
@@ -15,7 +16,7 @@ app.use(express.json());
 
 app.use('/', productoRouter)
 
-
+//app.use('/recipes', recipesRouter)
 
 
 
