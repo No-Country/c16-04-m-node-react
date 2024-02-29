@@ -28,6 +28,10 @@ const Recipe = sequelize.define("recipes", {
     difficulty: {
         type: DataTypes.ENUM('facil', 'media', 'dificil'),
         allowNull: false
+    },
+    img_url: {
+        type: DataTypes.STRING,
+        allowNull: true
     }
 });
 

@@ -15,9 +15,9 @@ export async function getAllRecipes(req, res) {
 
 // Crear nueva receta
 export async function createRecipe(req, res) {
-    const { recipe_name, description, instruction, cook_time, difficulty } = req.body;
+    const { recipe_name, description, instruction, cook_time, difficulty, img_url } = req.body;
     try {
-        const newRecipe = await Recipe.create({ recipe_name, description, instruction, cook_time, difficulty });
+        const newRecipe = await Recipe.create({ recipe_name, description, instruction, cook_time, difficulty, img_url });
         res.status(201).json(newRecipe);
     } catch (error) {
         console.error('Error al crear receta:', error);
@@ -28,13 +28,13 @@ export async function createRecipe(req, res) {
 // Actualizar receta por id
 export async function updateRecipe(req, res) {
     const { id } = req.params;
-    const { recipe_name, description, instruction, cook_time, difficulty } = req.body;
+    const { recipe_name, description, instruction, cook_time, difficulty, img_url } = req.body;
     try {
         const recipe = await Recipe.findByPk(id);
         if (!recipe) {
             return res.status(404).json({ message: 'Usuario no encontrado' });
         }
-        await recipe.update({ recipe_name, description, instruction, cook_time, difficulty });
+        await recipe.update({ recipe_name, description, instruction, cook_time, difficulty, img_url });
         res.json({ message: 'Receta actualizada correctamente' });
     } catch (error) {
         console.error('Error al actualizar la receta:', error);
