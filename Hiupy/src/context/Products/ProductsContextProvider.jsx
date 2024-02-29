@@ -2,6 +2,8 @@ import ProductsContext from "./ProductsContext";
 import useApiData from "../../Hooks/useApiData";
 
 const ProductsContextProvider = ({ children }) => {
+
+
     const [data, loading, error] = useApiData(
         "http://localhost:3000/productos"
     );
@@ -47,6 +49,8 @@ const ProductsContextProvider = ({ children }) => {
         return huerta;
     };
     getProductosHuerta();
+
+
 
     const values = {
         data,
