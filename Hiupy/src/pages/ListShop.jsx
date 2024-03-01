@@ -63,8 +63,6 @@ export const ListShop = () => {
       justifyContent: "space-between",
       alignItems: "center",
       boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)", 
-
-
     };
   
   
