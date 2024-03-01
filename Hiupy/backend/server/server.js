@@ -10,6 +10,7 @@ import recipeRouter from "./Router/recipeRouter.js";
 import shoppingListRouter from "./Router/shoppingListRouter.js";
 import prodRecipeRouter from "./Router/productRecipeRouter.js";
 import productShoppingListRouter from "./Router/productShoppingListRouter.js";
+import { getProductInventory } from "./controller/productInventoryController.js";
 import cors from "cors";
 
 const app = express();
@@ -41,7 +42,8 @@ app.use("/api", productShoppingListRouter);
 // Crear una instancia de Express
 app.listen(3000, async () => {
     console.log(`Server listening on 3000`);
-    await syncModel();
+    //await syncModel();
+    
 });
 
 //primer prueba de request datos json
