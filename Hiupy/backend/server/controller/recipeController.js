@@ -13,6 +13,18 @@ export async function getAllRecipes(req, res) {
     }
 }
 
+export async function getRecipe(req, res) {
+    const {id} = req.params;
+
+    try {
+        const recipe = await Recipe.findByPk(id);
+        res.json(recipe);
+    } catch (error) {
+        console.error('Error al obtener recetas:', error);
+        res.status(500).json({ message: 'Error al obtener recetas' });
+    }
+}
+
 // Crear nueva receta
 export async function createRecipe(req, res) {
     const { recipe_name, description, instruction, cook_time, difficulty } = req.body;
