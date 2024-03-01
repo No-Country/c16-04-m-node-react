@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Footer, NavBar } from "../../components";
+import { Footer, NavBar, Product } from "../../components";
 import ProductsContext from "../../context/Products/ProductsContext";
 
 export const Secos = () => {
@@ -9,16 +9,27 @@ export const Secos = () => {
     return (
         <div>
             <NavBar />
-            <h2 className="text-sm font-semibold">Alimentos Secos</h2>
-            {!loading & !error
-                ? productosSecos.map((productos) => (
-                      <p key={productos.id_product}>{productos.product_name}</p>
-                  ))
-                : error && (
-                      <>
-                          <h2>Lo sentimos, parece que ha ocurrido un error</h2>
-                      </>
-                  )}
+            <h2 className="text-md mt-4 text-center font-semibold">
+                Alimentos Secos
+            </h2>
+            <div className="flex flex-col gap-5 my-9 w-11/12 mx-auto">
+                {" "}
+                {!loading & !error
+                    ? productosSecos.map((producto) => (
+                          <Product
+                              key={producto.id_product}
+                              product={producto}
+                          />
+                      ))
+                    : error && (
+                          <>
+                              <h2>
+                                  Lo sentimos, parece que ha ocurrido un error
+                              </h2>
+                          </>
+                      )}
+            </div>
+
             <Footer />
         </div>
     );
