@@ -5,5 +5,5 @@ export * from "./ErrorPage";
 export * from "./Register";
 export * from "./Categories"
 export * from "./Recetas/RecipesCard";
-export * from "./"
-
+export * from "./";
+export * from "./ListShop";
