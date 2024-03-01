@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { NavBar, Footer } from "../../components";
+import IngridientsContext from "../../context/Ingridients/IngridientsContext"
+import { NavLink } from "react-router-dom";
 
 export const RecipesCard = () => {
+    
+    const { data, loading, error } = useContext(IngridientsContext);
     return (
         <>
             <NavBar />
@@ -24,45 +29,28 @@ export const RecipesCard = () => {
                         <h2 className=" font-semibold text-base underline">
                             Ingredientes
                         </h2>
-                        <li className=" flex justify-between">
-                            <label>1 taza de Arroz Blanco</label>
-                            <input type="checkbox" />
-                        </li>
-                        <li className=" flex justify-between">
-                            <label>1 cucharada de aceite vegeta</label>
-                            <input type="checkbox" />
-                        </li>
-                        <li className=" flex justify-between">
-                            <label>¼ taza de cerdo asado en rodaja</label>
-                            <input type="checkbox" />
-                        </li>
-                        <li className=" flex justify-between">
-                            <label>½ taza de apio, finamente rebanado</label>
-                            <input type="checkbox" />
-                        </li>
-                        <li className=" flex justify-between">
-                            <label>
-                                ⅓ taza de cebolla verde y sus hojas, cortado en
-                                rodajas
-                            </label>
-                            <input type="checkbox" />
-                        </li>
-                        <li className=" flex justify-between">
-                            <label>1 huevo batido</label>
-                            <input type="checkbox" />
-                        </li>
-                        <li className=" flex justify-between">
-                            <label>pimienta negra</label>
-                            <input type="checkbox" />
-                        </li>
-                        <li className=" flex justify-between">
-                            <label>
-                                2 cucharadas de salsa de soya baja en sodio
-                            </label>
-                            <input type="checkbox" />
-                        </li>
+                        {!loading && !error
+                    ? data.map((data) => (
+                        <li className=" flex justify-between" key={data.id}>
+                        <label>{data.nombre}</label>
+                        <input type="checkbox" />
+                    </li>
+                      ))
+                    : error && (
+                          <>
+                              <h2>
+                                  Lo sentimos, parece que ha ocurrido un error
+                              </h2>
+                          </>
+                      )}
+                        
                     </ul>
                 </div>
+                <NavLink to="/">
+                        <button className=" bg-e2a748 px-7 py-4 rounded-lg text-white">
+                            Lista de compras
+                        </button>
+                    </NavLink>
             </div>
             <Footer />
         </>
