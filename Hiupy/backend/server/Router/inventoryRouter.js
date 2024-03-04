@@ -4,3 +4,5 @@ const inventoryRouter = express.Router()
 
 
 inventoryRouter.get('/inventory/:id', getProductInventory)
+
+export default inventoryRouter
