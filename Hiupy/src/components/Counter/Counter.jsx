@@ -20,14 +20,14 @@ export const Counter = () => {
         <div className="flex flex-row gap-3 items-center text-md text-botones">
             <button
                 onClick={decrement}
-                className="text-lg font-semibold p-1 border border-botones rounded-full"
+                className="text-lg w-8 h-8 font-semibold  rounded-full border border-botones"
             >
                 -
             </button>
             <p>{counter}</p>
             <button
                 onClick={increment}
-                className="text-lg font-semibold p-1 border border-botones rounded-full"
+                className="text-lg w-8 h-8  font-semibold  border border-botones rounded-full"
             >
                 +
             </button>

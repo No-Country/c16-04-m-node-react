@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, LoadingPage, ErrorPage, Login, Register, RecipesCard, Frescos, Congelados, Secos, Huerta, CategoriesMain } from "../pages";
+import { Home, LoadingPage, ErrorPage, Login, Register, RecipesCard, Frescos, Congelados, Secos, Huerta, CategoriesMain, AddProduct } from "../pages";
 import { RecipesContainer } from "../pages/Recetas";
+
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +41,11 @@ export const router = createBrowserRouter([
     {
         path: "/Huerta",
         element: <Huerta/>, 
+    },
+    //Agregar productos
+    {
+        path: "/Add",
+        element: <AddProduct/>, 
     },
 
 

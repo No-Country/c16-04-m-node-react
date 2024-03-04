@@ -11,6 +11,7 @@ import shoppingListRouter from "./Router/shoppingListRouter.js";
 import prodRecipeRouter from "./Router/productRecipeRouter.js";
 import productShoppingListRouter from "./Router/productShoppingListRouter.js";
 import { getProductInventory } from "./controller/productInventoryController.js";
+import inventoryRouter from "./Router/inventoryRouter.js";
 import cors from "cors";
 
 const app = express();
@@ -38,6 +39,8 @@ app.use("/api", prodRecipeRouter);
 
 // Lista de compras y recetas
 app.use("/api", productShoppingListRouter);
+
+app.use('/api', inventoryRouter)
 
 // Crear una instancia de Express
 app.listen(3000, async () => {
