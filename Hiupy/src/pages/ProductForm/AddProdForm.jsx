@@ -17,7 +17,7 @@ export const AddProdForm = () => {
             //Petición de POST a la BD
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/productos",
+                    "http://localhost:3000/api/productosInv",
                     {
                         method: "POST",
                         headers: {
@@ -56,7 +56,7 @@ export const AddProdForm = () => {
                     className="flex flex-col gap-1 my-12"
                     onSubmit={handleSubmit}
                     method="POST"
-                    action="http://localhost:3000/api/productos"
+                    action="http://localhost:3000/api/productosInv"
                 >
                     <legend className="text-sm">Producto</legend>
                     <input
