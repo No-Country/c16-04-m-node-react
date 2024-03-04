@@ -18,7 +18,7 @@ export const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Puedes realizar acciones adicionales aquí si es necesario
+    //ACÁ FALTA LA LÓGICA DE VALIDACIÓN - TODO
     console.log("Formulario enviado");
   };
 
