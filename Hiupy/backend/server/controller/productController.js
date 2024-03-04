@@ -75,8 +75,10 @@ async function createProductInv(req, res) {
         const PKprod = newProduct.id_product;
         console.log(newProduct)
 
+        const inv = 1
         const formData2 = req.body;
         formData2.id_product = PKprod;
+        formData2.id_inventory = inv
 
         const quant = await products_inventory.create(formData2)
 
