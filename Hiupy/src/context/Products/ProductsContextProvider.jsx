@@ -7,8 +7,8 @@ const ProductsContextProvider = ({ children }) => {
     const [data, loading, error] = useApiData("http://localhost:3000/api/inventory/1");
     // console.log("Console log : ", data);
     // "/src/data/productos.json"
+
     //Método que se encarga de filtrar los productos del congelador
-    
     const getProductosCongelador = () => {
         const freezer = data.filter(
             (producto) => producto.location === "freezer"

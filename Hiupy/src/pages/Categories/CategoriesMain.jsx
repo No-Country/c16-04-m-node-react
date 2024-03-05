@@ -55,8 +55,18 @@ export const CategoriesMain = () => {
                     </p>
                 </NavLink>
 
+                <NavLink to="/All">
+                    {/* <h3 className="text-center text-md border-solid border-2 py-2 px-8 rounded-2xl border-botones">
+                        Todos los productos
+                    </h3> */}
+                    {/* Versión alternativa */}
+                    <h3 className="text-center text-white text-md bg-botones py-3 px-8 rounded-3xl">
+                        Todos los productos
+                    </h3>
+                </NavLink>
+
                 <div className="relative">
-                    <AddProdButton/>
+                    <AddProdButton />
                 </div>
             </div>
             <Footer />
