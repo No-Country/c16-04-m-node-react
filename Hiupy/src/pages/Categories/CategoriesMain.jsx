@@ -1,14 +1,7 @@
-import { NavBar, Footer, SearchBar } from "../../components";
+import { NavBar, Footer } from "../../components";
 import { NavLink } from "react-router-dom";
-// import { useState } from "react";
 
 export const CategoriesMain = () => {
-    // const [searchTerm, setSearchTerm] = useState("");
-
-    // const handleInputChange = (event) => {
-    //     setSearchTerm(event.target.value);
-    // };
-
     return (
         <div>
             <NavBar />
@@ -18,17 +11,15 @@ export const CategoriesMain = () => {
                     casa
                 </h3>
 
-                {/* <SearchBar
-                    className=""
-                    placeholder={"Ingresa los ingredientes"}
-                /> */}
                 <NavLink to="/Congelados">
                     <h3 className="text-center text-sm">Comidas congeladas</h3>
                     <img
                         className=" w-4/3 h-[60px]  rounded-2xl m-1"
                         src="/assets/images/congelados.png"
                     />
-                    <p className="text-[10px] text-dark-grey">¿Que vas a guardar en el freezer?</p>
+                    <p className="text-[10px] text-dark-grey">
+                        ¿Que vas a guardar en el freezer?
+                    </p>
                 </NavLink>
 
                 <NavLink to="/Frescos">
@@ -37,7 +28,9 @@ export const CategoriesMain = () => {
                         className=" w-4/3 h-[60px] rounded-2xl m-1"
                         src="/assets/images/frescos.png"
                     />
-                    <p className="text-[10px] text-dark-grey">¿Que vas a guardar en la heladera?</p>
+                    <p className="text-[10px] text-dark-grey">
+                        ¿Que vas a guardar en la heladera?
+                    </p>
                 </NavLink>
 
                 <NavLink to="/Secos">
@@ -46,7 +39,9 @@ export const CategoriesMain = () => {
                         className=" w-4/3 h-[60px]  rounded-2xl m-1"
                         src="/assets/images/secos.png"
                     />
-                    <p className="text-[10px] text-dark-grey">¿Que vas a guardar en la alacena?</p>
+                    <p className="text-[10px] text-dark-grey">
+                        ¿Que vas a guardar en la alacena?
+                    </p>
                 </NavLink>
 
                 <NavLink to="/Huerta">
@@ -55,13 +50,17 @@ export const CategoriesMain = () => {
                         className=" w-4/3 h-[60px] rounded-2xl m-1"
                         src="/assets/images/huerta.png"
                     />
-                    <p className="text-[10px] text-dark-grey">¿Que tienes en la huerta?</p>
+                    <p className="text-[10px] text-dark-grey">
+                        ¿Que tienes en la huerta?
+                    </p>
                 </NavLink>
 
                 <div className="relative">
-                    <button className="fixed bottom-24 right-5 bg-e2a748 hover:bg-orange-900 text-white font-bold py-4 px-6 rounded-full">
-                        +
-                    </button>
+                    <NavLink to="/Add">
+                        <button className="fixed bottom-24 right-5 text-2xl bg-e2a748 hover:bg-orange-900 text-white font-bold py-4 px-6 rounded-full">
+                            +
+                        </button>
+                    </NavLink>
                 </div>
             </div>
             <Footer />
