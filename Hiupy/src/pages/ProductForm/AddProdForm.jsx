@@ -1,6 +1,18 @@
 import { useState } from "react";
+import useApiData from "../../Hooks/useApiData";
 
 export const AddProdForm = () => {
+    const [data] = useApiData("http://localhost:3000/api/productos");
+    // console.log(data);
+
+    //Se encarga crear un array nuevo(...) solo con los locations y evitar que se repitan (new Set)
+    const locations = [...new Set(data.map((item) => item.location))];
+
+    const locationsWithDefault = ["¿Donde vas a guardar el alimento?", ...locations,]
+    
+    // const locations = ["", "freezer", "heladera", "alacena", "huerta"];
+    console.log("Logeando locations en AddProdForm", locationsWithDefault);
+
     //Validación del formulario
     const [formData, setFormData] = useState({
         product_name: "",
@@ -76,7 +88,25 @@ export const AddProdForm = () => {
                     ></input>
 
                     <legend className="text-sm">Ubicación</legend>
-                    <input
+                    <select
+                        name="location"
+                        className="
+                        border-2 
+                      border-light-grey 
+                        rounded-lg
+                        p-2
+                        w-full
+                        mb-6
+                        text-xs"
+                        onChange={handleChange}
+                        value={formData.location}
+                    >   
+                        {locationsWithDefault.map((location, index) => (
+                            <option key={index}>{location}</option>
+                        ))}
+                    </select>
+
+                    {/* <input
                         type="text"
                         placeholder="¿Donde guardas el producto?"
                         name="location"
@@ -90,7 +120,7 @@ export const AddProdForm = () => {
                         mb-6"
                         onChange={handleChange}
                         value={formData.location}
-                    ></input>
+                    ></input> */}
 
                     <legend className="text-sm">Cantidad</legend>
                     <input
