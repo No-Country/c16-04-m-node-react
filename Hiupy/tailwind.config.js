@@ -17,9 +17,9 @@ module.exports = {
         caceb9: "#CACEB9",
         e2a748: '#E2A748',
       },
-      fontFamily: {
-        poppins: ['Poppins']  //instalacion de fuente poppins
-      },
+      // fontFamily: {
+      //   poppins: ['Poppins']  //instalacion de fuente poppins
+      // },
       colors: {
         'dark-grey': '#A9A9A9',
         'amarillo-custom': '#FF9C00',

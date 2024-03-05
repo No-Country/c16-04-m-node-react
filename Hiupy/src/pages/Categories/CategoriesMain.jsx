@@ -1,4 +1,4 @@
-import { NavBar, Footer } from "../../components";
+import { NavBar, Footer, AddProdButton } from "../../components";
 import { NavLink } from "react-router-dom";
 
 export const CategoriesMain = () => {
@@ -56,11 +56,7 @@ export const CategoriesMain = () => {
                 </NavLink>
 
                 <div className="relative">
-                    <NavLink to="/Add">
-                        <button className="fixed bottom-24 right-5 text-2xl bg-e2a748 hover:bg-orange-900 text-white font-bold py-4 px-6 rounded-full">
-                            +
-                        </button>
-                    </NavLink>
+                    <AddProdButton/>
                 </div>
             </div>
             <Footer />

@@ -16,7 +16,7 @@ const ProductsContextProvider = ({ children }) => {
         console.log("Acá se ejecutó getProductosCongelador");
         return freezer;
     };
-    getProductosCongelador();
+    
 
     //Método que se encarga de filtrar los productos de heladera
     const getProductosFrescos = () => {
@@ -26,7 +26,7 @@ const ProductsContextProvider = ({ children }) => {
         console.log("Acá se ejecutó getProductosFrescos");
         return frescos;
     };
-    getProductosFrescos();
+    
 
     //Método que se encarga de filtrar los productos de secos
     const getProductosSecos = () => {
@@ -36,7 +36,7 @@ const ProductsContextProvider = ({ children }) => {
         console.log("Acá se ejecutó getProductosSecos");
         return alacena;
     };
-    getProductosSecos();
+    
 
     //Método que se encarga de filtrar los productos de huerta
     const getProductosHuerta = () => {
@@ -46,7 +46,6 @@ const ProductsContextProvider = ({ children }) => {
         console.log("Acá se ejecutó getProductosHuerta");
         return huerta;
     };
-    getProductosHuerta();
 
     const values = {
         data,
