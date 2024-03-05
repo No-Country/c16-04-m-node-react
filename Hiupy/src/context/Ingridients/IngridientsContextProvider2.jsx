@@ -2,10 +2,11 @@
 import IngridientsContext from "./IngridientsContext";
 import useApiData from "../../Hooks/useApiData";
 
-const IngridientsContextProvider = ({children}) => {
+const IngridientsContextProvider2 = ({children}) => {
     const [data, loading, error] = useApiData(
-        "http://localhost:3000/api/recipes/1"
+        "http://localhost:3000/api/recipes/2"
     );
+    console.log(data);
 
     const values = {
         data,
@@ -22,4 +23,4 @@ const IngridientsContextProvider = ({children}) => {
     );
 };
 
-export default IngridientsContextProvider
+export default IngridientsContextProvider2

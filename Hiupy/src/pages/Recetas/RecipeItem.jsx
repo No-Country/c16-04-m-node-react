@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 export const RecipeItem = ({ receta }) => {
     return (
-        <>
+        <>  
+            
             <img
                 className="w-[150px] h-[150px] rounded-2xl"
                 src={receta.img_url}

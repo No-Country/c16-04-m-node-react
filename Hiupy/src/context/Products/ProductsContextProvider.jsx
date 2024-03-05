@@ -13,7 +13,7 @@ const ProductsContextProvider = ({ children }) => {
         // console.log(frescos);
         return freezer;
     };
-    getProductosCongelador();
+    
 
     //Método que se encarga de filtrar los productos de heladera
     const getProductosFrescos = () => {
@@ -23,7 +23,7 @@ const ProductsContextProvider = ({ children }) => {
         // console.log(frescos);
         return frescos;
     };
-    getProductosFrescos();
+    
 
     //Método que se encarga de filtrar los productos de secos
     const getProductosSecos = () => {
@@ -33,7 +33,7 @@ const ProductsContextProvider = ({ children }) => {
         // console.log(frescos);
         return alacena;
     };
-    getProductosSecos();
+    
 
     //Método que se encarga de filtrar los productos de huerta
     const getProductosHuerta = () => {
@@ -43,7 +43,7 @@ const ProductsContextProvider = ({ children }) => {
         // console.log(frescos);
         return huerta;
     };
-    getProductosHuerta();
+    
 
     const values = {
         data,
