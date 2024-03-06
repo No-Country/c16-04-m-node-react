@@ -8,7 +8,7 @@ export const Footer = () => {
                 <li className="text-base mb-4 border-b-4 border-botones font-bold w-2/6 max-w-20">Explorar</li>
                 <li><NavLink to="/Home" className=" text-xs">Inicio</NavLink></li>
                 <li><NavLink to="/Login" className=" text-xs">Cocinar</NavLink></li>
-                <li><NavLink to="/List" className=" text-xs">Inventario</NavLink></li>
+                <li><NavLink to="/RecipeCard" className=" text-xs">Inventario</NavLink></li>
                 <li><NavLink to="/" className=" text-xs">Lista de compras</NavLink></li>
 
                 {/* rutas temporales para pruebas de redireccion */}

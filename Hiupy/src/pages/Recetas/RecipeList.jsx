@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { RecipeItem } from "./RecipeItem";
 
 export const RecipesList = ({ receta }) => {

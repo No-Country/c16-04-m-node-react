@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import RecipeContext from "./RecipesContext";
+import InventoryContext from "./InventoryContext"
 import useApiData from "../../Hooks/useApiData";
 
-const RecipeContextProvider = ({ children }) => {
+const InventoryContextProvider = ({ children }) => {
     const [data, loading, error] = useApiData(
-        " http://localhost:3000/api/recipes"
+        "http://localhost:3000/api/inventory/1"
     );
     // " /src/data/recetas.json"
     // console.log("Console log : ", data);
@@ -16,11 +16,11 @@ const RecipeContextProvider = ({ children }) => {
     };
     return (
         <>
-            <RecipeContext.Provider value={values}>
+            <InventoryContext.Provider value={values}>
                 {children}
-            </RecipeContext.Provider>
+            </InventoryContext.Provider>
         </>
     );
 };
 
-export default RecipeContextProvider;
+export default InventoryContextProvider;
