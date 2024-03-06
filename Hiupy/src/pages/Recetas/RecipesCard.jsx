@@ -1,6 +1,5 @@
 import { useContext, /* useState, useEffect  */} from "react";
 import { NavBar, Footer } from "../../components";
-/* import IngridientsContext from "../../context/Ingridients/IngridientsContext"; */
 import ProductContext from "../../context/Products/ProductsContext";
 import { NavLink, useParams } from "react-router-dom";
 import RecipeContext from "../../context/Recipes/RecipesContext";
@@ -16,7 +15,6 @@ export const RecipesCard = () => {
     const [checked, setChecked] = useState([]); */
 
     const { data: productsData, loading: productsLoading, error: productsError } = useContext(ProductContext);
-    /* const { data: ingridientsData, loading: ingridientsLoading, error: ingridientsError } = useContext(IngridientsContext); */
     const { data: recipesData, /* loading: recipesLoading, error: recipesError */ } = useContext(RecipeContext);
     
     const selectedRecipe = recipesData.find(recipe => recipe.id_recipe === parseInt(id_recipe));
@@ -45,14 +43,15 @@ export const RecipesCard = () => {
                     </figcaption>
                     <ul className=" text-xs space-y-3 max-w-96">
                         <h2 className=" font-semibold text-base underline">
-                            Ingredientes
+                            Preparación
                         </h2>
                         <legend>{selectedRecipe.instruction}</legend>
+                        <h3 className=" font-semibold text-base underline">Ingredientes</h3>
                         {!productsLoading && !productsError ? (
                 productsData.map((item) => (
                     <li className="flex justify-between" key={item.id_product}>
                         <label>{item.product_name}</label>
-                        <input type="checkbox" />
+                        <input type="checkbox" disabled/>
                     </li>
                         ))
                     ) : (
