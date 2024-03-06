@@ -10,7 +10,7 @@ export const Frescos = () => {
         <div>
             <NavBar />
             <h2 className="text-md mt-4 text-center font-semibold">Alimentos Frescos</h2>
-            <div className="flex flex-col min-h-screen gap-5 my-9 w-11/12 mx-auto">
+            <div className="flex flex-col min-h-screen gap-6 my-9 w-11/12 mx-auto">
                 {!loading & !error
                     ? productosFrescos.map((producto) => (
                           <Product key={producto.id_product} product={producto}/>

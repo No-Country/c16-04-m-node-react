@@ -29,12 +29,12 @@ export const Product = ({ product }) => {
         <div
             className={
                 color === "blue"
-                    ? "flex flex-row p-2 rounded-lg  transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-blue-200 hover:shadow-blue-300 duration-300  justify-between text-xs"
+                    ? "flex flex-row p-2 rounded-lg  transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-blue-100 hover:shadow-blue-100 duration-300  justify-between text-xs"
                     : color === "green"
-                    ? "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-green-200 hover:shadow-green-300 duration-300 justify-between text-xs"
+                    ? "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-green-100 hover:shadow-green-100 duration-300 justify-between text-xs"
                     : color === "yellow"
-                    ? "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-amber-200 hover:shadow-amber-300 duration-300 justify-between text-xs"
-                    : "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-pink-200 hover:shadow-pink-300 duration-300 justify-between text-xs"
+                    ? "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-amber-100 hover:shadow-amber-100 duration-300 justify-between text-xs"
+                    : "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-pink-100 hover:shadow-pink-100 duration-300 justify-between text-xs"
             }
         >
             {/* <p>{product.img_url}</p> */}

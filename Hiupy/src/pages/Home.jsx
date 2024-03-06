@@ -40,7 +40,7 @@ export const Home = () => {
                             texto="Conseguir los ingredientes que faltan"
                             etiqueta="Lista de compras"
                             fondo="#E2A748"
-                            ruta=""
+                            ruta="/ListShop"
                         />
                     </div>
                     {/* {/* <div className="w-3/4 h-full mx-auto">
