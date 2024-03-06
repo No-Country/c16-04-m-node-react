@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ProductsContext from "./ProductsContext";
 import useApiData from "../../Hooks/useApiData";
 

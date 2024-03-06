@@ -51,7 +51,7 @@ export const RecipesCard = () => {
                 productsData.map((item) => (
                     <li className="flex justify-between" key={item.id_product}>
                         <label>{item.product_name}</label>
-                        <input type="checkbox" disabled/>
+                        <input type="checkbox" className=" checked:bg-green-400 rounded-xl" checked={item.quantity >= 2 ? true : false} disabled/>
                     </li>
                         ))
                     ) : (
