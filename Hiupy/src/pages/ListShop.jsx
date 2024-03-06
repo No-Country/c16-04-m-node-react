@@ -21,7 +21,7 @@ export const ListShop = () => {
 
   const ListaDeCompras = ({ lista }) => {
     return (
-      <ul>
+      <ul className="h-screen">
         {lista.map((item, index) => (
           <ItemDeCompra key={index} item={item} />
         ))}
@@ -88,7 +88,7 @@ export const ListShop = () => {
       <NavBar />
       <h3 className="text-left text-xl font-bold p-2"> A continuacion tendras la lista de compras </h3>
       <input
-        className="flex w-full rounded-xl border border-light-grey p-2"
+        className="flex w-full rounded-xl border text-sm border-light-grey p-2"
         type="text"
         placeholder="Ingresa los ingredientes a comprar"
         value={nuevoItem}

@@ -33,7 +33,7 @@ export const RecipesCard = () => {
                     <img
                         src={selectedRecipe.img_url}
                         alt={selectedRecipe.recipe_name}
-                        className=" max-w-96 object-contain"
+                        className=" max-w-96 object-contain rounded-xl"
                     />
                     <figcaption className=" flex justify-between max-w-96">
                         <h2 className=" font-semibold text-1xs w-2/3">
