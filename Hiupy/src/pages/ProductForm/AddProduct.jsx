@@ -1,9 +1,10 @@
+
 import { NavBar } from "../../components";
 import { AddProdForm } from "./AddProdForm";
 
+
 export const AddProduct = () => {
     
-
     return (
         <div>
             <NavBar />

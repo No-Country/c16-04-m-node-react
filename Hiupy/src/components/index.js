@@ -1,5 +1,5 @@
 export * from "./Navigation"
-export * from "./Boton"
+export * from "./Buttons"
 export * from "./SearchBar"
 export * from "./Forms"
 export * from "./Footer"
