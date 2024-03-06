@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, LoadingPage, ErrorPage, Login, Register, RecipesCard, Frescos, Congelados, Secos, Huerta, CategoriesMain, ListShop, AddProduct } from "../pages";
+import { Home, LoadingPage, ErrorPage, Login, Register, RecipesCard, Frescos, Congelados, Secos, Huerta, CategoriesMain, AddProduct, ListShop} from "../pages";
 import { RecipesContainer } from "../pages/Recetas";
 import { FullInventory } from "../pages/Categories/FullInventory";
 

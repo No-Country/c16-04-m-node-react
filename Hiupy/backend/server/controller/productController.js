@@ -86,8 +86,6 @@ async function createProductInv(req, res) {
 
 
 
-
-
         res.status(201).json(newProduct);
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -95,6 +93,19 @@ async function createProductInv(req, res) {
 }
 
 
+async function deleteProductInv (req, res){
+    const { id_products_inventory } = req.params;
+    try {
+        await products_inventory.destroy({
+            where: { id_products_inventory  }
+        });
+        res.status(200).json({ message: 'Producto eliminado correctamente.' });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+}
 
-export { getProducts, createProduct, updateProduct, deleteProduct , createProductInv};
+
+
+export { getProducts, createProduct, updateProduct, deleteProduct , createProductInv,deleteProductInv};
 
