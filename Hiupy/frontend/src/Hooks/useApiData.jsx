@@ -7,7 +7,7 @@ const useApiData = (url) => {
 
     useEffect(()=>{
         fetch(url,{
-            method: 'GET',
+            method: "GET",
             mode: 'cors', 
           })
         .then((res) => res.json())
