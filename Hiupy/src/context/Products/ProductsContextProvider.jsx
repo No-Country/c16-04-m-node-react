@@ -2,55 +2,50 @@ import ProductsContext from "./ProductsContext";
 import useApiData from "../../Hooks/useApiData";
 
 const ProductsContextProvider = ({ children }) => {
-
-
-    const [data, loading, error] = useApiData(
-        "http://localhost:3000/productos"
-    );
-    // "/src/data/productos.json"
+    
+    //Fetch para productos del inventario
+    const [data, loading, error] = useApiData("http://localhost:3000/api/inventory/1");
     // console.log("Console log : ", data);
+    // "/src/data/productos.json"
 
     //Método que se encarga de filtrar los productos del congelador
     const getProductosCongelador = () => {
         const freezer = data.filter(
             (producto) => producto.location === "freezer"
         );
-        // console.log(frescos);
+        console.log("Acá se ejecutó getProductosCongelador");
         return freezer;
     };
-    getProductosCongelador();
+    
 
     //Método que se encarga de filtrar los productos de heladera
     const getProductosFrescos = () => {
         const frescos = data.filter(
             (producto) => producto.location === "heladera"
         );
-        // console.log(frescos);
+        console.log("Acá se ejecutó getProductosFrescos");
         return frescos;
     };
-    getProductosFrescos();
+    
 
     //Método que se encarga de filtrar los productos de secos
     const getProductosSecos = () => {
         const alacena = data.filter(
             (producto) => producto.location === "alacena"
         );
-        // console.log(frescos);
+        console.log("Acá se ejecutó getProductosSecos");
         return alacena;
     };
-    getProductosSecos();
+    
 
     //Método que se encarga de filtrar los productos de huerta
     const getProductosHuerta = () => {
         const huerta = data.filter(
             (producto) => producto.location === "huerta"
         );
-        // console.log(frescos);
+        console.log("Acá se ejecutó getProductosHuerta");
         return huerta;
     };
-    getProductosHuerta();
-
-
 
     const values = {
         data,

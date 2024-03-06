@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, LoadingPage, ErrorPage, Login, Register, RecipesCard, Frescos, Congelados, Secos, Huerta, CategoriesMain } from "../pages";
+import { Home, LoadingPage, ErrorPage, Login, Register, RecipesCard, Frescos, Congelados, Secos, Huerta, CategoriesMain, AddProduct } from "../pages";
 import { RecipesContainer } from "../pages/Recetas";
+import { FullInventory } from "../pages/Categories/FullInventory";
+
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +24,10 @@ export const router = createBrowserRouter([
     },
     //Inventario / Categorías
     {
+        path: "/All",
+        element: <FullInventory/>, 
+    },
+    {
         path: "/Categories",
         element: <CategoriesMain/>, 
     },
@@ -40,6 +46,11 @@ export const router = createBrowserRouter([
     {
         path: "/Huerta",
         element: <Huerta/>, 
+    },
+    //Agregar productos
+    {
+        path: "/Add",
+        element: <AddProduct/>, 
     },
 
 

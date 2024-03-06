@@ -1,21 +1,19 @@
-import { useContext } from "react";
-import { Footer, NavBar, Product, AddProdButton } from "../../components";
+import { NavBar, AddProdButton, Footer, Product } from "../../components";
 import ProductsContext from "../../context/Products/ProductsContext";
+import { useContext } from "react";
 
-export const Secos = () => {
-    const { loading, error, getProductosSecos } = useContext(ProductsContext);
-    const productosSecos = getProductosSecos();
-    // console.log(productosSecos);
+export const FullInventory = () => {
+    const { data, loading, error } = useContext(ProductsContext);
+    
     return (
         <div>
             <NavBar />
             <h2 className="text-md mt-4 text-center font-semibold">
-                Alimentos Secos
+                Todos tus alimentos
             </h2>
             <div className="flex flex-col min-h-screen gap-5 my-9 w-11/12 mx-auto">
-                {" "}
                 {!loading & !error
-                    ? productosSecos.map((producto) => (
+                    ? data.map((producto) => (
                           <Product
                               key={producto.id_product}
                               product={producto}
@@ -32,7 +30,6 @@ export const Secos = () => {
             <div className="relative">
                 <AddProdButton />
             </div>
-
             <Footer />
         </div>
     );

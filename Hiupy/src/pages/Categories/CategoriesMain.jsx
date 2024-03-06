@@ -1,33 +1,25 @@
-import { NavBar, Footer, SearchBar } from "../../components";
+import { NavBar, Footer, AddProdButton } from "../../components";
 import { NavLink } from "react-router-dom";
-// import { useState } from "react";
 
 export const CategoriesMain = () => {
-    // const [searchTerm, setSearchTerm] = useState("");
-
-    // const handleInputChange = (event) => {
-    //     setSearchTerm(event.target.value);
-    // };
-
     return (
         <div>
             <NavBar />
-            <div className="flex flex-col gap-3 mx-auto w-11/12 text-center">
+            <div className="flex flex-col gap-8 items-center mx-auto w-11/12 text-center">
                 <h3 className="m-2 text-left text-xl font-bold ">
                     Agrega a tu inventario los ingredientes que tienes en tu
-                    casa{" "}
+                    casa
                 </h3>
 
-                <SearchBar
-                    className=""
-                    placeholder={"Ingresa los ingredientes"}
-                />
                 <NavLink to="/Congelados">
                     <h3 className="text-center text-sm">Comidas congeladas</h3>
                     <img
                         className=" w-4/3 h-[60px]  rounded-2xl m-1"
                         src="/assets/images/congelados.png"
                     />
+                    <p className="text-[10px] text-dark-grey">
+                        ¿Que vas a guardar en el freezer?
+                    </p>
                 </NavLink>
 
                 <NavLink to="/Frescos">
@@ -36,6 +28,9 @@ export const CategoriesMain = () => {
                         className=" w-4/3 h-[60px] rounded-2xl m-1"
                         src="/assets/images/frescos.png"
                     />
+                    <p className="text-[10px] text-dark-grey">
+                        ¿Que vas a guardar en la heladera?
+                    </p>
                 </NavLink>
 
                 <NavLink to="/Secos">
@@ -44,6 +39,9 @@ export const CategoriesMain = () => {
                         className=" w-4/3 h-[60px]  rounded-2xl m-1"
                         src="/assets/images/secos.png"
                     />
+                    <p className="text-[10px] text-dark-grey">
+                        ¿Que vas a guardar en la alacena?
+                    </p>
                 </NavLink>
 
                 <NavLink to="/Huerta">
@@ -52,12 +50,23 @@ export const CategoriesMain = () => {
                         className=" w-4/3 h-[60px] rounded-2xl m-1"
                         src="/assets/images/huerta.png"
                     />
+                    <p className="text-[10px] text-dark-grey">
+                        ¿Que tienes en la huerta?
+                    </p>
+                </NavLink>
+
+                <NavLink to="/All">
+                    {/* <h3 className="text-center text-md border-solid border-2 py-2 px-8 rounded-2xl border-botones">
+                        Todos los productos
+                    </h3> */}
+                    {/* Versión alternativa */}
+                    <h3 className="text-center text-white text-md bg-botones py-3 px-8 rounded-3xl">
+                        Todos los productos
+                    </h3>
                 </NavLink>
 
                 <div className="relative">
-                    <button className="fixed bottom-24 right-5 bg-e2a748 hover:bg-orange-900 text-white font-bold py-4 px-6 rounded-full">
-                        +
-                    </button>
+                    <AddProdButton />
                 </div>
             </div>
             <Footer />

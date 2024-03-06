@@ -1,4 +1,5 @@
 import Products from '../models/Productos.js';
+import products_inventory from '../models/products_inventory.js';
 // Controlador para manejar las operaciones CRUD de productos
 
 // Obtener todos los productos
@@ -61,4 +62,39 @@ async function deleteProduct(req, res) {
     }
 }
 
-export { getProducts, createProduct, updateProduct, deleteProduct };
+
+
+async function createProductInv(req, res) {
+    if (!req.body) {
+        console.log(req.body)
+        return res.status(400).json({ message: 'No se proporcionaron datos en el cuerpo de la solicitud.' });
+    }
+    try {
+        const { product_name, description, category, location } = req.body;
+        const newProduct = await Products.create({ product_name, description, category, location });
+        const PKprod = newProduct.id_product;
+        console.log(newProduct)
+
+        const inv = 1
+        const formData2 = req.body;
+        formData2.id_product = PKprod;
+        formData2.id_inventory = inv
+
+        const quant = await products_inventory.create(formData2)
+
+        console.log(quant)
+
+
+
+
+
+        res.status(201).json(newProduct);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+}
+
+
+
+export { getProducts, createProduct, updateProduct, deleteProduct , createProductInv};
+

@@ -6,7 +6,10 @@ const useApiData = (url) => {
     const [error, setError] = useState(false);
 
     useEffect(()=>{
-        fetch(url)
+        fetch(url,{
+            method: 'GET',
+            mode: 'cors', 
+          })
         .then((res) => res.json())
         .then((data) => setData(data))
         .catch((error) => setError(true))
