@@ -34,7 +34,7 @@ export const ListShop = () => {
   };
 
   const ItemDeCompra = ({ item }) => {
-    const [contador, setContador] = useState(1); // Inicializa el contador en 1
+    const [contador, setContador] = useState(1); 
   
     const incrementarContador = () => {
       setContador(contador + 1);
@@ -46,7 +46,6 @@ export const ListShop = () => {
       }
     };
   
-    // Aplica el estilo directamente a todos los elementos de la lista
     const estilo = {
       color: "black",
       border: "1px solid grey",
@@ -55,6 +54,8 @@ export const ListShop = () => {
       height: "50px",
       padding: "8px",
       margin: "20px 0",
+      fontWeight: "500",
+      fontSize: "13px",
       listStyle: "none",
       textAlign: "left",
       lineHeight: "30px",
@@ -70,9 +71,9 @@ export const ListShop = () => {
       <li style={estilo}>
         {item}
         <div className="flex space-x-4 p-3" >
-          <button className="border-2 w-9 border-yellow-500 rounded-full text-yellow-500 " onClick={incrementarContador}>+</button>
-          <span>{contador}</span>
-          <button className="border-2 w-9 border-yellow-500 rounded-full text-yellow-500" onClick={decrementarContador}>-</button>
+          <button className="border-2 w-9 border-[#af7d4d] text-center text-lg rounded-full text-[#af7d4d] " onClick={incrementarContador}><strong>+</strong></button>
+          <span className="text-center text-lg items-center ">{contador}</span>
+          <button className="border-2 w-9 border-[#af7d4d] text-center text-lg rounded-full text-[#af7d4d] " onClick={decrementarContador}><strong>-</strong></button>
         </div>
       </li>
     );

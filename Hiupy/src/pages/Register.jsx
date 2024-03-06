@@ -71,14 +71,24 @@ export const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const err = onValidate(formData);
+  const nombre = formData.nombre.trim();
+  const correo = formData.correo.trim();
+  const contrasenia = formData.contrasenia.trim();
+  const confirmarContrasenia = formData.confirmarContrasenia.trim();
 
-    if (err == null) {
-      console.log("Enviando formulario");
-    } else {
-      setError(err);
-    }
-  };
+  if (nombre === '' || correo === '' || contrasenia === '' || confirmarContrasenia === '') {
+    window.alert('Todos los campos son obligatorios');
+    return;
+  } else{
+    window.alert("Formulario enviado");
+  }
+  if (formData.contrasenia !== formData.confirmarContrasenia) {
+    setError('Las contraseñas no coinciden');
+    return;
+  }
+
+
+  }
 
   const handleChange = (e) => {
     setFormData({
