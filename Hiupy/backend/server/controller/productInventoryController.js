@@ -14,7 +14,8 @@ export async function getProductInventory(req, res){
         });
         const productData = productsInventory.map(product => ({ 
             id_products: product.id_product,
-            quantity: product.quantity}))
+            quantity: product.quantity,
+            id_product_inventory: product.id_products_inventory}))
       console.log(productData)
 
     const prodInv = await products.findAll({
