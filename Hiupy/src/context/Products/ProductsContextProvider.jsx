@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ProductsContext from "./ProductsContext";
 import useApiData from "../../Hooks/useApiData";
 
@@ -17,6 +18,7 @@ const ProductsContextProvider = ({ children }) => {
         return freezer;
     };
     
+    
 
     //Método que se encarga de filtrar los productos de heladera
     const getProductosFrescos = () => {
@@ -26,6 +28,7 @@ const ProductsContextProvider = ({ children }) => {
         console.log("Acá se ejecutó getProductosFrescos");
         return frescos;
     };
+    
     
 
     //Método que se encarga de filtrar los productos de secos
@@ -37,6 +40,7 @@ const ProductsContextProvider = ({ children }) => {
         return alacena;
     };
     
+    
 
     //Método que se encarga de filtrar los productos de huerta
     const getProductosHuerta = () => {
@@ -46,6 +50,7 @@ const ProductsContextProvider = ({ children }) => {
         console.log("Acá se ejecutó getProductosHuerta");
         return huerta;
     };
+    
 
     const values = {
         data,

@@ -8,12 +8,12 @@ import ProductsContextProvider from "./context/Products/ProductsContextProvider.
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <ProductsContextProvider>
-            <RecipeContextProvider>
-                <RouterProvider router={router}>
-                    <App />
-                </RouterProvider>
-            </RecipeContextProvider>
-        </ProductsContextProvider>
+            <ProductsContextProvider>
+                <RecipeContextProvider>
+                    <RouterProvider router={router}>
+                        <App />
+                    </RouterProvider>
+                </RecipeContextProvider>
+            </ProductsContextProvider>
     </React.StrictMode>
 );

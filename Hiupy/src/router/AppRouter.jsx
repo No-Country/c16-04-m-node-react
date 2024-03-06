@@ -60,7 +60,7 @@ export const router = createBrowserRouter([
         element: <RecipesContainer/>,
     },
     {
-        path: "/RecipeCard",
+        path: "/RecipeCard/:id_recipe",
         element: <RecipesCard/>,
     },
     {
