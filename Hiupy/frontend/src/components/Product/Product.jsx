@@ -18,7 +18,7 @@ export const Product = ({ product }) => {
             setColor("brown");
         }
     };
-    
+
     useEffect(() => {
         setLocationColor();
     }, []);
@@ -29,38 +29,42 @@ export const Product = ({ product }) => {
         const id = product.id_product;
         const url = `http://localhost:3000/api/productosInv/${id}`;
         fetch(url, {
-            method: 'DELETE'
-          })
-          .then(response => {
-            if (response.ok) {
-              console.log('Producto eliminado exitosamente');
-              // Puedes realizar acciones adicionales aquí si lo deseas
-            } else {
-              console.error('Ocurrió un error al eliminar el producto');
-            }
-          })
-          .catch(error => {
-            console.error('Ocurrió un error al eliminar el producto:', error);
-          });
-          console.log("Deleted");
-        };
-    
+            method: "DELETE",
+        })
+            .then((response) => {
+                if (response.ok) {
+                    console.log(`'Producto ${id} eliminado exitosamente'`);
+                    // Puedes realizar acciones adicionales aquí si lo deseas
+                } else {
+                    console.error("Ocurrió un error al eliminar el producto");
+                }
+            })
+            .catch((error) => {
+                console.error(
+                    "Ocurrió un error al eliminar el producto:",
+                    error
+                );
+            });
+    };
+
     return (
         <div
             className={
                 color === "blue"
-                    ? "flex flex-row p-2 rounded-lg  transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-blue-100 hover:shadow-blue-100 duration-300  justify-between text-xs"
+                    ? "flex flex-row p-2 rounded-lg gap-10 transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-blue-100 hover:shadow-blue-100 duration-300  text-xs"
                     : color === "green"
-                    ? "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-green-100 hover:shadow-green-100 duration-300 justify-between text-xs"
+                    ? "flex flex-row p-2 rounded-lg gap-10 transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-green-100 hover:shadow-green-100 duration-300  text-xs"
                     : color === "yellow"
-                    ? "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-amber-100 hover:shadow-amber-100 duration-300 justify-between text-xs"
-                    : "flex flex-row p-2 rounded-lg transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-pink-100 hover:shadow-pink-100 duration-300 justify-between text-xs"
+                    ? "flex flex-row p-2 rounded-lg gap-10 transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-amber-100 hover:shadow-amber-100 duration-300 text-xs"
+                    : "flex flex-row p-2 rounded-lg gap-10 transition-ease-in-out delay-150 shadow-sm hover:shadow-lg shadow-pink-100 hover:shadow-pink-100 duration-300  text-xs"
             }
         >
             {/* <p>{product.img_url}</p> */}
-            <p>{product.product_name}</p>
-            <DeleteProdButton onClick={deleteProd} />
-            <InventoryCounter quantity={product.quantity} />
+            <p className="w-8/12">{product.product_name}</p>
+            <div className="flex gap-2 m-none items-center">
+                <DeleteProdButton onClick={deleteProd} />
+                <InventoryCounter quantity={product.quantity} />
+            </div>
         </div>
     );
 };
