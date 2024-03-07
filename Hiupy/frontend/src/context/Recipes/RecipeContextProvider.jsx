@@ -4,7 +4,7 @@ import useApiData from "../../Hooks/useApiData";
 
 const RecipeContextProvider = ({ children }) => {
     const [data, loading, error] = useApiData(
-        " http://localhost:3000/api/recipes"
+        "https://c16-04-m-node-react.onrender.com/api/recipes"
     );
     // " /src/data/recetas.json"
     // console.log("Console log : ", data);

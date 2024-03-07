@@ -4,7 +4,7 @@ import useApiData from "../../Hooks/useApiData";
 
 const InventoryContextProvider = ({ children }) => {
     const [data, loading, error] = useApiData(
-        "http://localhost:3000/api/inventory/1"
+        "https://c16-04-m-node-react.onrender.com/api/inventory/1"
     );
     // " /src/data/recetas.json"
     // console.log("Console log : ", data);
