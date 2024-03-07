@@ -1,5 +1,9 @@
 import { useState } from "react";
 import useApiData from "../../Hooks/useApiData";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export const AddProdForm = () => {
     const [data] = useApiData("http://localhost:3000/api/productos");
@@ -20,6 +24,50 @@ export const AddProdForm = () => {
         quantity: 0,
     });
 
+    //Toast exito
+    const successToast = ()=> {
+        toast.success('Producto agregado', {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+            // console.log("Success se esta llamando")
+    }
+    //Toast campos incompletos
+    const completeToast = ()=> {
+        toast.warning('Por favor complete todos los campos', {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+            // console.log("Success se esta llamando")
+    }
+    //Toast Error
+    const errorToast = ()=> {
+        toast.error('Error al cargar el producto', {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+            // console.log("Success se esta llamando")
+    }
+        
+
     const handleSubmit = async (e) => {
         // const { producto, categoria, cantidad } = formData;
         const { product_name, location, quantity } = formData;
@@ -39,15 +87,17 @@ export const AddProdForm = () => {
                     }
                 );
                 if (response.ok) {
-                    alert("Producto agregado");
+                    successToast();
+                    console.log("Producto agregado")
                 } else {
                     alert("Hubo un problema al agregar el producto");
                 }
             } catch (error) {
+                errorToast()
                 console.log("Error al enviar la solicitud", error);
             }
         } else {
-            alert("Por favor complete todos los campos");
+            completeToast();
         }
     };
 
@@ -63,6 +113,7 @@ export const AddProdForm = () => {
 
     return (
         <div>
+        <ToastContainer/>
             <section>
                 <form
                     className="flex flex-col gap-1 my-12"
@@ -105,6 +156,7 @@ export const AddProdForm = () => {
                             <option key={index}>{location}</option>
                         ))}
                     </select>
+                    
 
                     {/* <input
                         type="text"
@@ -140,6 +192,7 @@ export const AddProdForm = () => {
                     ></input>
 
                     <button
+                        type="submit"
                         className="
                         w-full
                         p-2

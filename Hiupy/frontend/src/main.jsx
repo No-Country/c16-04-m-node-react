@@ -6,14 +6,17 @@ import { router } from "./router/AppRouter.jsx";
 import RecipeContextProvider from "./context/Recipes/RecipeContextProvider.jsx";
 import ProductsContextProvider from "./context/Products/ProductsContextProvider.jsx";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-            <ProductsContextProvider>
-                <RecipeContextProvider>
-                    <RouterProvider router={router}>
+        <ProductsContextProvider>
+            <RecipeContextProvider>
+                <RouterProvider router={router}>
+                    
                         <App />
-                    </RouterProvider>
-                </RecipeContextProvider>
-            </ProductsContextProvider>
+                    
+                </RouterProvider>
+            </RecipeContextProvider>
+        </ProductsContextProvider>
     </React.StrictMode>
 );
