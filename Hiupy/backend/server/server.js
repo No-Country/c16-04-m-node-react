@@ -9,7 +9,7 @@ import userRouter from "./Router/userRouter.js";
 import recipeRouter from "./Router/recipeRouter.js";
 import shoppingListRouter from "./Router/shoppingListRouter.js";
 import prodRecipeRouter from "./Router/productRecipeRouter.js";
-import productShoppingListRouter from "./Router/productShoppingListRouter.js";
+//import productShoppingListRouter from "./Router/productShoppingListRouter.js";
 import { getProductInventory } from "./controller/productInventoryController.js";
 import inventoryRouter from "./Router/inventoryRouter.js";
 import cors from "cors";
@@ -38,7 +38,7 @@ app.use("/api", shoppingListRouter);
 app.use("/api", prodRecipeRouter);
 
 // Lista de compras y recetas
-app.use("/api", productShoppingListRouter);
+//app.use("/api", productShoppingListRouter);
 
 app.use('/api', inventoryRouter)
 
