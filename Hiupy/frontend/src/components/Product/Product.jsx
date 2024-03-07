@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { InventoryCounter } from "../Counter";
+import { InventoryCounter, DeleteProdButton } from "../../components";
 
 //Componente reutilizable que se encarga de renderizar el producto en inventario
 export const Product = ({ product }) => {
@@ -18,13 +18,33 @@ export const Product = ({ product }) => {
             setColor("brown");
         }
     };
-
+    
     useEffect(() => {
         setLocationColor();
     }, []);
 
     // console.log("Blue es: ", setLocationColor());
-
+    //Lógica del boton Delete
+    const deleteProd = () => {
+        const id = product.id_product;
+        const url = `http://localhost:3000/api/productosInv/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+          })
+          .then(response => {
+            if (response.ok) {
+              console.log('Producto eliminado exitosamente');
+              // Puedes realizar acciones adicionales aquí si lo deseas
+            } else {
+              console.error('Ocurrió un error al eliminar el producto');
+            }
+          })
+          .catch(error => {
+            console.error('Ocurrió un error al eliminar el producto:', error);
+          });
+          console.log("Deleted");
+        };
+    
     return (
         <div
             className={
@@ -39,6 +59,7 @@ export const Product = ({ product }) => {
         >
             {/* <p>{product.img_url}</p> */}
             <p>{product.product_name}</p>
+            <DeleteProdButton onClick={deleteProd} />
             <InventoryCounter quantity={product.quantity} />
         </div>
     );
