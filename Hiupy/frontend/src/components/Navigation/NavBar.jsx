@@ -13,9 +13,9 @@ export function NavBar() {
                 />
                 {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Hiupy</span> */}
             </Navbar.Brand>
-            <div className="flex md:order-2">
+            <div className="flex md:order-2 ">
                 <Dropdown
-                    className="bg-botones"
+                    className="bg-botones  "
                     arrowIcon={false}
                     inline
                     label={
@@ -28,7 +28,7 @@ export function NavBar() {
                     }
                 >
                     {/*----------- Dropdown del USER ------------*/}
-                    <Dropdown.Header className="bg-botones">
+                    <Dropdown.Header className="bg-botones ">
                         <span className="block text-sm text-white">
                             Anthony Kiedis
                         </span>
@@ -47,7 +47,7 @@ export function NavBar() {
                 {/*----------------- TOOGLE BUTTON ACÁ ---------------- */}
                 <Navbar.Toggle className="text-botones focus:ring-2 rounded-full focus:ring-botones " />
             </div>
-            <Navbar.Collapse>
+            <Navbar.Collapse className="">
                 <Navbar.Link
                     href="/home"
                     className="text-black font-semibold text-sm"

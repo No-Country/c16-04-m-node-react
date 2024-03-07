@@ -9,6 +9,7 @@ export const LoginForm = () => {
                     <input
                         type="email"
                         placeholder="Ingresá tu correo electrónico"
+                        value="akiedis@redhot.com"
                         className="
                     border-2 
                     border-light-grey 
@@ -23,6 +24,7 @@ export const LoginForm = () => {
                     <input
                         type="password"
                         placeholder="Ingresá tu correo electrónico"
+                        value="somerandom"
                         className="
                     border-2 
                     border-light-grey 
@@ -41,8 +43,9 @@ export const LoginForm = () => {
                     >
                         ¿Olvidaste la contraseña?
                     </legend>
-                    <button
-                        className="
+                    <NavLink to="/home">
+                        <button
+                            className="
                     w-full
                     p-2
                     border-none
@@ -50,9 +53,10 @@ export const LoginForm = () => {
                     bg-botones
                     text-white
                     font-semibold"
-                    >
-                        Ingresá
-                    </button>
+                        >
+                            Ingresá
+                        </button>
+                    </NavLink>
                 </form>
             </section>
             {/* Logeo alternativo */}

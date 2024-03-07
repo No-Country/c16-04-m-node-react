@@ -6,22 +6,16 @@ export const Home = () => {
 
     return (
         <>
-            <NavBar />
-            <div className="w-full box-border flex flex-col h-screen justify-between">
-                <div className="px-6 flex flex-col h-full gap-y-14">
-                    <div className="flex w-full justify-between pt-4">
-                        <div className="flex-col">
-                            <h2 className="font-semibold text-xl">
-                                Buenas noches usuario
-                            </h2>
-                            <span className="text-dark-grey text-xs">
-                                ¿Cómo vamos a alimentarnos?
-                            </span>
-                        </div>
-                    </div>
-
-                    <SearchBar placeholder={"Buscar ingredientes"} />
-                    <div className="space-y-6">
+            <NavBar/>
+                <div className="absolute text-left mx-6 pt-4">
+                    <h2 className="font-semibold text-xl">
+                        Buenas noches usuario
+                    </h2>
+                    <span className="text-dark-grey text-xs">
+                        ¿Cómo vamos a alimentarnos?
+                    </span>
+                </div>
+                <div className="flex flex-col gap-8 pb-6 w-11/12 mx-auto h-screen justify-center ">
                         <Boton
                             texto="Preparar o planificar nuestra comida"
                             etiqueta="Cocinar"
@@ -43,7 +37,10 @@ export const Home = () => {
                             ruta="/ListShop"
                         />
                     </div>
-                    {/* {/* <div className="w-3/4 h-full mx-auto">
+
+                {/* <SearchBar placeholder={"Buscar ingredientes"} /> */}
+
+                {/* {/* <div className="w-3/4 h-full mx-auto">
                         <Carousel
                             onSlideChange={(index) =>
                                 console.log("onSlideChange()", index)
@@ -63,8 +60,6 @@ export const Home = () => {
                             </div>
                         </Carousel> 
                     </div> */}
-                </div>
-            </div>
             <Footer />
         </>
     );
