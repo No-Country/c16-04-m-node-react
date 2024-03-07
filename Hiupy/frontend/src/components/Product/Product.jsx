@@ -27,7 +27,7 @@ export const Product = ({ product }) => {
     //Lógica del boton Delete
     const deleteProd = () => {
         const id = product.id_product;
-        const url = `http://localhost:3000/api/productosInv/${id}`;
+        const url = `https://c16-04-m-node-react.onrender.com/api/productosInv/${id}`;
         fetch(url, {
             method: "DELETE",
         })

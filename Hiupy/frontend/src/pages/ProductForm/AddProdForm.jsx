@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 export const AddProdForm = () => {
-    const [data] = useApiData("http://localhost:3000/api/productos");
+    const [data] = useApiData("https://c16-04-m-node-react.onrender.com/api/productos");
     // console.log(data);
 
     //Se encarga crear un array nuevo(...) solo con los locations y evitar que se repitan (new Set)
@@ -77,7 +77,7 @@ export const AddProdForm = () => {
             //Petición de POST a la BD
             try {
                 const response = await fetch(
-                    "http://localhost:3000/api/productosInv",
+                    "http://https://c16-04-m-node-react.onrender.com/api/productosInv",
                     {
                         method: "POST",
                         headers: {
@@ -119,7 +119,7 @@ export const AddProdForm = () => {
                     className="flex flex-col gap-1 my-12"
                     onSubmit={handleSubmit}
                     method="POST"
-                    action="http://localhost:3000/api/productosInv"
+                    action="https://c16-04-m-node-react.onrender.com/api/productosInv"
                 >
                     <legend className="text-sm">Producto</legend>
                     <input
