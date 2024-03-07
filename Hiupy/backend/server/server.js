@@ -16,11 +16,13 @@ import cors from "cors";
 
 const app = express();
 
+// Configuración de CORS
+app.use(cors()
+);
+
 // Middleware para manejar solicitudes JSON
 app.use(express.json());
 
-// Configuración de CORS
-app.use(cors());
 // Rutas
 //Productos
 app.use("/api", router);
@@ -40,13 +42,12 @@ app.use("/api", prodRecipeRouter);
 // Lista de compras y recetas
 //app.use("/api", productShoppingListRouter);
 
-app.use('/api', inventoryRouter)
+app.use("/api", inventoryRouter);
 
 // Crear una instancia de Express
 app.listen(3000, async () => {
     console.log(`Server listening on 3000`);
-    //await syncModel();
-    
+    await syncModel();
 });
 
 //primer prueba de request datos json
