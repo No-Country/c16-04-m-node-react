@@ -1,16 +1,19 @@
 "use client";
 
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
+import { NavLink } from "react-router-dom"; 
 
 export function NavBar() {
     return (
         <Navbar className="bg-white w-full sticky" fluid>
             <Navbar.Brand>
-                <img
-                    src="/assets/images/logo-marron.png"
-                    className="mr-3 h-10 bg-white text-slate-700"
-                    alt="Hiupy Logo"
-                />
+                <NavLink to="/home">
+                    <img
+                        src="/assets/images/logo-marron.png"
+                        className="mr-3 h-10 bg-white text-slate-700"
+                        alt="Hiupy Logo"
+                    />
+                </NavLink>
                 {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Hiupy</span> */}
             </Navbar.Brand>
             <div className="flex md:order-2 ">
