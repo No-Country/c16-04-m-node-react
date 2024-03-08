@@ -77,7 +77,7 @@ export const AddProdForm = () => {
             //Petición de POST a la BD
             try {
                 const response = await fetch(
-                    "http://https://c16-04-m-node-react.onrender.com/api/productosInv",
+                    "https://c16-04-m-node-react.onrender.com/api/productosInv",
                     {
                         method: "POST",
                         headers: {
