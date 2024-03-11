@@ -20,7 +20,7 @@ export async function getProductShoppingList(req, res){
             id_product_inventory: product.id_products_shop_list}))
       console.log(productData)
 
-    const prodShop = await products.findAll({
+    const prodShop = await Products.findAll({
         where: {id_product: productData.map(product => product.id_products)},
         
       
@@ -51,7 +51,7 @@ export async function getProductShoppingList(req, res){
 
 
 
-   async function createProductShop(req, res) {
+   export async function createProductShop(req, res) {
     if (!req.body) {
         console.log(req.body)
         return res.status(400).json({ message: 'No se proporcionaron datos en el cuerpo de la solicitud.' });
@@ -65,9 +65,9 @@ export async function getProductShoppingList(req, res){
         const shop = 1
         const formData2 = req.body;
         formData2.id_product = PKprod;
-        formData2.id_inventory = shop
+        formData2.id_list = shop
 
-        const quant = await productsShoppingList.create(formData2)
+        const quant = await ProductShoppingList.create(formData2)
 
         console.log(quant)
 
