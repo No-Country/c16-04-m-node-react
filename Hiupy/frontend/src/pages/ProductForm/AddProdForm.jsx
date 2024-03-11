@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 export const AddProdForm = () => {
     const [data] = useApiData("https://c16-04-m-node-react.onrender.com/api/productos");
     // console.log(data);
-
+    
     //Se encarga crear un array nuevo(...) solo con los locations y evitar que se repitan (new Set)
     const locations = [...new Set(data.map((item) => item.location))];
 

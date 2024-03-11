@@ -25,6 +25,7 @@ export const Product = ({ product }) => {
 
     // console.log("Blue es: ", setLocationColor());
     //Lógica del boton Delete
+    //TODO--
     const deleteProd = () => {
         const id = product.id_product;
         const url = `https://c16-04-m-node-react.onrender.com/api/productosInv/${id}`;
