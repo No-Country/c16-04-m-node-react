@@ -27,7 +27,8 @@ export async function getProductInventory(req, res){
 
     const response = prodInv.map((product, index) => ({
         ...product.toJSON(),
-        quantity: productData[index].quantity // 
+        quantity: productData[index].quantity, // 
+        productinvId: productData[index].id_product_inventory //
     }));
 
 

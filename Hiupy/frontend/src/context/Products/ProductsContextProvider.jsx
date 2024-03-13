@@ -5,9 +5,11 @@ import useApiData from "../../Hooks/useApiData";
 const ProductsContextProvider = ({ children }) => {
     //Fetch para productos del inventario
     const [data, loading, error] = useApiData(
-        "https://c16-04-m-node-react.onrender.com/api/inventory/1"
+        "https://c16-04-m-node-react.onrender.com/api/inventory/1/"
     );
+
     console.log("Console log : ", data);
+    
     // "/src/data/productos.json"
 
     //Método que se encarga de filtrar los productos del congelador
@@ -45,6 +47,7 @@ const ProductsContextProvider = ({ children }) => {
         console.log("Acá se ejecutó getProductosHuerta");
         return huerta;
     };
+
 
     const values = {
         data,

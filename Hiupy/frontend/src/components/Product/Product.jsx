@@ -19,15 +19,13 @@ export const Product = ({ product }) => {
         }
     };
 
-    useEffect(() => {
-        setLocationColor();
-    }, []);
 
     // console.log("Blue es: ", setLocationColor());
     //Lógica del boton Delete
     //TODO--
     const deleteProd = () => {
-        const id = product.id_product;
+        const id = product.productinvId;
+        console.log("clg productInvId", id);
         const url = `https://c16-04-m-node-react.onrender.com/api/productosInv/${id}`;
         fetch(url, {
             method: "DELETE",
@@ -35,7 +33,6 @@ export const Product = ({ product }) => {
             .then((response) => {
                 if (response.ok) {
                     console.log(`'Producto ${id} eliminado exitosamente'`);
-                    // Puedes realizar acciones adicionales aquí si lo deseas
                 } else {
                     console.error("Ocurrió un error al eliminar el producto");
                 }
@@ -47,6 +44,10 @@ export const Product = ({ product }) => {
                 );
             });
     };
+
+    useEffect(() => {
+        setLocationColor();
+    }, []);
 
     return (
         <div
