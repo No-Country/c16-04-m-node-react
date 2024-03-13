@@ -1,8 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { InventoryCounter, DeleteProdButton } from "../../components";
+import ProductsContext from "../../context/Products/ProductsContext";
+
 
 //Componente reutilizable que se encarga de renderizar el producto en inventario
 export const Product = ({ product }) => {
+    const {deleteProd} = useContext(ProductsContext)
+
+    const toDeleteId = product.productinvId
     const [color, setColor] = useState("");
     const setLocationColor = () => {
         if (product.location === "freezer") {
@@ -18,37 +23,11 @@ export const Product = ({ product }) => {
             setColor("brown");
         }
     };
-
-
-    // console.log("Blue es: ", setLocationColor());
-    //Lógica del boton Delete
-    //TODO--
-    const deleteProd = () => {
-        const id = product.productinvId;
-        console.log("clg productInvId", id);
-        const url = `https://c16-04-m-node-react.onrender.com/api/productosInv/${id}`;
-        fetch(url, {
-            method: "DELETE",
-        })
-            .then((response) => {
-                if (response.ok) {
-                    console.log(`'Producto ${id} eliminado exitosamente'`);
-                } else {
-                    console.error("Ocurrió un error al eliminar el producto");
-                }
-            })
-            .catch((error) => {
-                console.error(
-                    "Ocurrió un error al eliminar el producto:",
-                    error
-                );
-            });
-    };
-
+   
     useEffect(() => {
         setLocationColor();
     }, []);
-
+    
     return (
         <div
             className={
@@ -64,7 +43,7 @@ export const Product = ({ product }) => {
             {/* <p>{product.img_url}</p> */}
             <p className="w-8/12">{product.product_name}</p>
             <div className="flex gap-2 m-none items-center">
-                <DeleteProdButton onClick={deleteProd} />
+                <DeleteProdButton onClick={()=>deleteProd(toDeleteId)} />
                 <InventoryCounter quantity={product.quantity} />
             </div>
         </div>

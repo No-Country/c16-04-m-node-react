@@ -3,7 +3,7 @@ import ProductsContext from "../../context/Products/ProductsContext";
 import { useContext } from "react";
 
 export const FullInventory = () => {
-    const { data, loading, error } = useContext(ProductsContext);
+    const { updatedData, loading, error } = useContext(ProductsContext);
     
     return (
         <div>
@@ -13,7 +13,7 @@ export const FullInventory = () => {
             </h2>
             <div className="flex flex-col min-h-screen gap-6 my-9 w-11/12 mx-auto">
                 {!loading & !error
-                    ? data.map((producto) => (
+                    ? updatedData.map((producto) => (
                           <Product
                               key={producto.id_product}
                               product={producto}

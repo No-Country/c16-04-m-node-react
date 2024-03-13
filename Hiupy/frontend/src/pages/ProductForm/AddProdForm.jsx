@@ -15,7 +15,7 @@ export const AddProdForm = () => {
     const locationsWithDefault = ["¿Donde vas a guardar el alimento?", ...locations,]
     
     // const locations = ["", "freezer", "heladera", "alacena", "huerta"];
-    console.log("Logeando locations en AddProdForm", locationsWithDefault);
+    // console.log("Logeando locations en AddProdForm", locationsWithDefault);
 
     //Validación del formulario
     const [formData, setFormData] = useState({
@@ -109,7 +109,7 @@ export const AddProdForm = () => {
             [target.name]: target.value.toLowerCase(),
         });
     };
-    console.log("Log de input: ", formData);
+    // console.log("Log de input: ", formData);
 
     return (
         <div>
