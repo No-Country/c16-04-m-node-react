@@ -4,18 +4,25 @@ import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 export const AddProdForm = () => {
-    const [data] = useApiData("https://c16-04-m-node-react.onrender.com/api/productos");
+    const [data] = useApiData(
+        "https://c16-04-m-node-react.onrender.com/api/productos"
+    );
     // console.log(data);
-    
+
     //Se encarga crear un array nuevo(...) solo con los locations y evitar que se repitan (new Set)
     const locations = [...new Set(data.map((item) => item.location))];
+    //Parece que hay productos con valor null, acá se filtra para que no aparezca en el menú despegable
+    const filteredLocations = locations.filter((location)=> location !== null)
+    console.log(filteredLocations)
 
-    const locationsWithDefault = ["¿Donde vas a guardar el alimento?", ...locations,]
-    
+    const locationsWithDefault = [
+        "¿Donde vas a guardar el alimento?",
+        ...filteredLocations,
+    ];
+
     // const locations = ["", "freezer", "heladera", "alacena", "huerta"];
-    // console.log("Logeando locations en AddProdForm", locationsWithDefault);
+    console.log("Logeando locations en AddProdForm", locationsWithDefault);
 
     //Validación del formulario
     const [formData, setFormData] = useState({
@@ -25,8 +32,8 @@ export const AddProdForm = () => {
     });
 
     //Toast exito
-    const successToast = ()=> {
-        toast.success('Producto agregado', {
+    const successToast = () => {
+        toast.success("Producto agregado", {
             position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -35,12 +42,12 @@ export const AddProdForm = () => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
-            // console.log("Success se esta llamando")
-    }
+        });
+        // console.log("Success se esta llamando")
+    };
     //Toast campos incompletos
-    const completeToast = ()=> {
-        toast.warning('Por favor complete todos los campos', {
+    const completeToast = () => {
+        toast.warning("Por favor complete todos los campos", {
             position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -49,12 +56,12 @@ export const AddProdForm = () => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
-            // console.log("Success se esta llamando")
-    }
+        });
+        // console.log("Success se esta llamando")
+    };
     //Toast Error
-    const errorToast = ()=> {
-        toast.error('Error al cargar el producto', {
+    const errorToast = () => {
+        toast.error("Error al cargar el producto", {
             position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -63,10 +70,9 @@ export const AddProdForm = () => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
-            // console.log("Success se esta llamando")
-    }
-        
+        });
+        // console.log("Success se esta llamando")
+    };
 
     const handleSubmit = async (e) => {
         // const { producto, categoria, cantidad } = formData;
@@ -88,12 +94,12 @@ export const AddProdForm = () => {
                 );
                 if (response.ok) {
                     successToast();
-                    console.log("Producto agregado")
+                    console.log("Producto agregado");
                 } else {
                     alert("Hubo un problema al agregar el producto");
                 }
             } catch (error) {
-                errorToast()
+                errorToast();
                 console.log("Error al enviar la solicitud", error);
             }
         } else {
@@ -113,7 +119,7 @@ export const AddProdForm = () => {
 
     return (
         <div>
-        <ToastContainer/>
+            <ToastContainer />
             <section>
                 <form
                     className="flex flex-col gap-1 my-12"
@@ -151,12 +157,11 @@ export const AddProdForm = () => {
                         text-xs"
                         onChange={handleChange}
                         value={formData.location}
-                    >   
+                    >
                         {locationsWithDefault.map((location, index) => (
                             <option key={index}>{location}</option>
                         ))}
                     </select>
-                    
 
                     {/* <input
                         type="text"
