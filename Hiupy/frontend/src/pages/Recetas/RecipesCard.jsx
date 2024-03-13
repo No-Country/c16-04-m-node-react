@@ -7,7 +7,7 @@ import RecipeContext from "../../context/Recipes/RecipesContext";
 export const RecipesCard = () => {
     const { id_recipe } = useParams();
 
-    const { data: productsData, loading: productsLoading, error: productsError } = useContext(ProductContext);
+    const { updatedData: productsData, loading: productsLoading, error: productsError } = useContext(ProductContext);
     const { data: recipesData } = useContext(RecipeContext);
     
     const selectedRecipe = recipesData.find(recipe => recipe.id_recipe === parseInt(id_recipe));
