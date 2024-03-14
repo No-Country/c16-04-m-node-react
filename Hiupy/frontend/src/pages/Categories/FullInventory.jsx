@@ -1,9 +1,9 @@
 import { NavBar, AddProdButton, Footer, Product } from "../../components";
-import ProductsContext from "../../context/Products/ProductsContext";
+import InventoryContext from "../../context/Inventory/InventoryContext";
 import { useContext } from "react";
 
 export const FullInventory = () => {
-    const { updatedData, loading, error } = useContext(ProductsContext);
+    const { updatedData, loading, error } = useContext(InventoryContext);
     
     return (
         <div>

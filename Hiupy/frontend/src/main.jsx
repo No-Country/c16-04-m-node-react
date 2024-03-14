@@ -3,20 +3,20 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router/AppRouter.jsx";
-import RecipeContextProvider from "./context/Recipes/RecipeContextProvider.jsx";
-import ProductsContextProvider from "./context/Products/ProductsContextProvider.jsx";
-
+import RecipesContextProvider from "./context/Recipes/RecipesContextProvider.jsx";
+import InventoryContextProvider from "./context/Inventory/InventoryContextProvider.jsx";
+import RecipeIngredientsContextProvider from "./context/Recipes/RecipeIngredientsContextProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <ProductsContextProvider>
-            <RecipeContextProvider>
-                <RouterProvider router={router}>
-                    
+        <InventoryContextProvider>
+            <RecipesContextProvider>
+                <RecipeIngredientsContextProvider>
+                    <RouterProvider router={router}>
                         <App />
-                    
-                </RouterProvider>
-            </RecipeContextProvider>
-        </ProductsContextProvider>
+                    </RouterProvider>
+                </RecipeIngredientsContextProvider>
+            </RecipesContextProvider>
+        </InventoryContextProvider>
     </React.StrictMode>
 );

@@ -1,13 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { InventoryCounter, DeleteProdButton } from "../../components";
-import ProductsContext from "../../context/Products/ProductsContext";
-
+import InventoryContext from "../../context/Inventory/InventoryContext";
 
 //Componente reutilizable que se encarga de renderizar el producto en inventario
 export const Product = ({ product }) => {
-    const {deleteProd} = useContext(ProductsContext)
+    const { deleteProd } = useContext(InventoryContext);
 
-    const toDeleteId = product.productinvId
+    const toDeleteId = product.productinvId;
     const [color, setColor] = useState("");
     const setLocationColor = () => {
         if (product.location === "freezer") {
@@ -23,11 +22,11 @@ export const Product = ({ product }) => {
             setColor("brown");
         }
     };
-   
+
     useEffect(() => {
         setLocationColor();
     }, []);
-    
+
     return (
         <div
             className={
@@ -43,7 +42,7 @@ export const Product = ({ product }) => {
             {/* <p>{product.img_url}</p> */}
             <p className="w-8/12">{product.product_name}</p>
             <div className="flex gap-2 m-none items-center">
-                <DeleteProdButton onClick={()=>deleteProd(toDeleteId)} />
+                <DeleteProdButton onClick={() => deleteProd(toDeleteId)} />
                 <InventoryCounter quantity={product.quantity} />
             </div>
         </div>

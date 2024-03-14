@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
 //Componente que permite acceder al Contexto
-const RecipeContext = createContext()
+const RecipesContext = createContext()
 
-export default RecipeContext
+export default RecipesContext

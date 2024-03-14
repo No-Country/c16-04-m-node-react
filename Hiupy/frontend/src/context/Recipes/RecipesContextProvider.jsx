@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import RecipeContext from "./RecipesContext";
+import RecipesContext from "./RecipesContext";
 import useApiData from "../../Hooks/useApiData";
 
-const RecipeContextProvider = ({ children }) => {
+const RecipesContextProvider = ({ children }) => {
     const [data, loading, error] = useApiData(
         "https://c16-04-m-node-react.onrender.com/api/recipes"
     );
@@ -16,11 +16,11 @@ const RecipeContextProvider = ({ children }) => {
     };
     return (
         <>
-            <RecipeContext.Provider value={values}>
+            <RecipesContext.Provider value={values}>
                 {children}
-            </RecipeContext.Provider>
+            </RecipesContext.Provider>
         </>
     );
 };
 
-export default RecipeContextProvider;
+export default RecipesContextProvider;

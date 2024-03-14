@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Footer, NavBar, AddProdButton, Product } from "../../components";
-import ProductsContext from "../../context/Products/ProductsContext";
+import InventoryContext from "../../context/Inventory/InventoryContext";
 
 export const Congelados = () => {
     const { loading, error, getProductosCongelador } =
-        useContext(ProductsContext);
+        useContext(InventoryContext);
     const productosCongelador = getProductosCongelador();
     // console.log(productosCongelador);
     return (
