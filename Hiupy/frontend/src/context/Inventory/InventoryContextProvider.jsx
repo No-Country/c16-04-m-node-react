@@ -53,6 +53,23 @@ const InventoryContextProvider = ({ children }) => {
         return huerta;
     };
 
+    //Método que se encarga de comparar el nombre del producto pasado como argumento con los existentes en el inventario y retornar true o false.
+    const getProductByName = (prodName) => {
+        const itemByName = updatedData.find(
+            (item) => item.product_name.toLowerCase().trim() === prodName
+        );
+        if(itemByName){
+            console.log("Producto encontrado", itemByName)
+            return true
+            
+        } else {
+            console.log("Producto no encontrado", itemByName)
+            return false
+        }
+        
+    };
+
+
     //Método que se encarga de eliminar productos del inventario
     const deleteProd = (prodId) => {
         const id = prodId;
@@ -94,6 +111,7 @@ const InventoryContextProvider = ({ children }) => {
         getProductosCongelador,
         getProductosSecos,
         getProductosHuerta,
+        getProductByName,
         deleteProd,
     };
 
