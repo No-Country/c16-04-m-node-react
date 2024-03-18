@@ -14,6 +14,7 @@ export const RecipesCard = () => {
         loading,
         error,
     } = useContext(RecipeIngredientsContext);
+    
     const { data: recipesData } = useContext(RecipesContext);
     const { updatedData, getProductByName } = useContext(InventoryContext);
     // console.log(recipeIngredients)
