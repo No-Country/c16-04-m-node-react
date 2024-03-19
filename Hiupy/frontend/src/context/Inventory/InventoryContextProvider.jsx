@@ -59,11 +59,11 @@ const InventoryContextProvider = ({ children }) => {
             (item) => item.product_name.toLowerCase().trim() === prodName
         );
         if(itemByName){
-            console.log("Producto encontrado", itemByName)
+            // console.log("Producto encontrado", itemByName)
             return true
             
         } else {
-            console.log("Producto no encontrado", itemByName)
+            // console.log("Producto no encontrado", itemByName)
             return false
         }
         

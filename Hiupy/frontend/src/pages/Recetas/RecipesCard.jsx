@@ -18,8 +18,9 @@ export const RecipesCard = () => {
     const { data: recipesData } = useContext(RecipesContext);
     const { updatedData, getProductByName } = useContext(InventoryContext);
     // console.log(recipeIngredients)
+    console.log(id_recipe)
 
-    console.log("inventoryData", updatedData);
+    // console.log("inventoryData", updatedData);
     //Busco la receta que coincida con el id que me traigo de la url con useParams
     const selectedRecipe = recipesData.find(
         (recipe) => recipe.id_recipe === parseInt(id_recipe)
@@ -56,11 +57,11 @@ export const RecipesCard = () => {
                                 </h3>
                                 {!loading && !error
                                     ? recipeIngredients.prodRec.map((item) => {
-                                          console.log(
+                                          {/* console.log(
                                               "esto es item",
                                               item.id_product,
                                               item.product_name.toLowerCase()
-                                          );
+                                          ); */}
                                           const byName = getProductByName(
                                               item.product_name
                                                   .toLowerCase()
