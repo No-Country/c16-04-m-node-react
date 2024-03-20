@@ -1,24 +1,27 @@
 import { useContext } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { NavBar, Footer } from "../../components";
-
 import RecipesContext from "../../context/Recipes/RecipesContext";
 import RecipeIngredientsContext from "../../context/Recipes/RecipeIngredientsContext";
 import InventoryContext from "../../context/Inventory/InventoryContext";
 
 export const RecipesCard = () => {
+    
     const { id_recipe } = useParams();
 
     const {
         data: recipeIngredients,
         loading,
         error,
+        getId
     } = useContext(RecipeIngredientsContext);
+    
     
     const { data: recipesData } = useContext(RecipesContext);
     const { updatedData, getProductByName } = useContext(InventoryContext);
     // console.log(recipeIngredients)
     console.log(id_recipe)
+    getId(id_recipe)
 
     // console.log("inventoryData", updatedData);
     //Busco la receta que coincida con el id que me traigo de la url con useParams
