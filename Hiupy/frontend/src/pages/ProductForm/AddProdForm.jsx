@@ -13,21 +13,24 @@ export const AddProdForm = () => {
     //Se encarga crear un array nuevo(...) solo con los locations y evitar que se repitan (new Set)
     const locations = [...new Set(data.map((item) => item.location))];
     //Parece que hay productos con valor null, acá se filtra para que no aparezca en el menú despegable
-    const filteredLocations = locations.filter((location)=> location !== null)
-    console.log(filteredLocations)
+    const filteredLocations = locations.filter((location) => location !== null);
+   
 
     const locationsWithDefault = [
         "¿Donde vas a guardar el alimento?",
         ...filteredLocations,
     ];
 
-    // const locations = ["", "freezer", "heladera", "alacena", "huerta"];
-    console.log("Logeando locations en AddProdForm", locationsWithDefault);
+    const units = ["especifica el tipo de unidad","gramos","mililitros","unidades"];
+    
+
+    // console.log("Logeando locations en AddProdForm", locationsWithDefault);
 
     //Validación del formulario
     const [formData, setFormData] = useState({
         product_name: "",
         location: "",
+        unit_measure: "",
         quantity: 0,
     });
 
@@ -76,10 +79,10 @@ export const AddProdForm = () => {
 
     const handleSubmit = async (e) => {
         // const { producto, categoria, cantidad } = formData;
-        const { product_name, location, quantity } = formData;
+        const { product_name, location, quantity, unit_measure } = formData;
         e.preventDefault();
         // if (producto && categoria && cantidad) {
-        if (product_name && location && quantity) {
+        if (product_name && location && quantity, unit_measure) {
             //Petición de POST a la BD
             try {
                 const response = await fetch(
@@ -163,22 +166,6 @@ export const AddProdForm = () => {
                         ))}
                     </select>
 
-                    {/* <input
-                        type="text"
-                        placeholder="¿Donde guardas el producto?"
-                        name="location"
-                        className="
-                        border-2 
-                      border-light-grey 
-                        rounded-lg
-                        p-2
-                        w-full
-                        placeholder:text-xs
-                        mb-6"
-                        onChange={handleChange}
-                        value={formData.location}
-                    ></input> */}
-
                     <legend className="text-sm">Cantidad</legend>
                     <input
                         type="number"
@@ -190,11 +177,32 @@ export const AddProdForm = () => {
                         rounded-lg
                         p-2
                         w-full
-                        placeholder:text-xs
+                        text-xs
                         mb-6"
                         onChange={handleChange}
                         value={formData.quantity}
                     ></input>
+
+                    <legend className="text-sm">Unidad</legend>
+                    <select
+                        type="string"
+                        placeholder="Unidad"
+                        name="unit_measure"
+                        className="
+                        border-2 
+                      border-light-grey 
+                        rounded-lg
+                        p-2
+                        w-full
+                        text-xs
+                        mb-6"
+                        onChange={handleChange}
+                        value={formData.unit_measure}
+                    >
+                         {units.map((unit, index) => (
+                            <option key={index}>{unit}</option>
+                        ))}
+                    </select>
 
                     <button
                         type="submit"
