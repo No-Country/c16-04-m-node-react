@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import { NavBar, Footer } from "../../components";
 import RecipesContext from "../../context/Recipes/RecipesContext";
@@ -6,22 +6,25 @@ import RecipeIngredientsContext from "../../context/Recipes/RecipeIngredientsCon
 import InventoryContext from "../../context/Inventory/InventoryContext";
 
 export const RecipesCard = () => {
-    
     const { id_recipe } = useParams();
 
     const {
         data: recipeIngredients,
         loading,
         error,
-        getId
+        getId,
     } = useContext(RecipeIngredientsContext);
-    
-    
+
     const { data: recipesData } = useContext(RecipesContext);
     const { updatedData, getProductByName } = useContext(InventoryContext);
     // console.log(recipeIngredients)
-    console.log(id_recipe)
-    getId(id_recipe)
+    console.log(id_recipe);
+    console.log("consoleLog en recipeCard", recipeIngredients);
+
+    //Llamo a getId pasandole id_recipe, el cual actualiza el estado
+    useEffect(() => {
+        getId(id_recipe);
+    }, [id_recipe]);
 
     // console.log("inventoryData", updatedData);
     //Busco la receta que coincida con el id que me traigo de la url con useParams
@@ -58,13 +61,15 @@ export const RecipesCard = () => {
                                 <h3 className="font-semibold text-base underline">
                                     Ingredientes
                                 </h3>
-                                {!loading && !error
+                                {!loading && !error && recipeIngredients
                                     ? recipeIngredients.prodRec.map((item) => {
-                                          {/* console.log(
+                                          {
+                                              /* console.log(
                                               "esto es item",
                                               item.id_product,
                                               item.product_name.toLowerCase()
-                                          ); */}
+                                          ); */
+                                          }
                                           const byName = getProductByName(
                                               item.product_name
                                                   .toLowerCase()
