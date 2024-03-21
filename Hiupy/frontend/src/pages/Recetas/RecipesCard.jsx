@@ -21,6 +21,8 @@ export const RecipesCard = () => {
     console.log(id_recipe);
     console.log("consoleLog en recipeCard", recipeIngredients);
 
+    
+
     //Llamo a getId pasandole id_recipe, el cual actualiza el estado
     useEffect(() => {
         getId(id_recipe);
@@ -68,13 +70,13 @@ export const RecipesCard = () => {
                                               "esto es item",
                                               item.id_product,
                                               item.product_name.toLowerCase()
-                                          ); */
+                                            */
                                           }
                                           const byName = getProductByName(
                                               item.product_name
                                                   .toLowerCase()
                                                   .trim()
-                                          );
+                                          )
                                           return (
                                               <li
                                                   className="flex justify-between"
@@ -90,7 +92,7 @@ export const RecipesCard = () => {
                                                       disabled={!byName}
                                                   />
                                               </li>
-                                          );
+                                          )
                                       })
                                     : error && (
                                           <>
@@ -100,9 +102,23 @@ export const RecipesCard = () => {
                                               </h2>
                                           </>
                                       )}
+                                
+                                {/* {!loading && !error && recipeIngredients
+                                    ? recipeIngredients.Quant.map((item) => {
+                                        {console.log(item);}
+                                        
+                                      })
+                                    : error && (
+                                          <>
+                                              <h2>
+                                                  Lo sentimos, parece que ha
+                                                  ocurrido un error
+                                              </h2>
+                                          </>
+                                      )} */}
                             </ul>
                             <NavLink
-                                to="/ListShop"
+                                to="/Shopping"
                                 className="self-center mt-8"
                             >
                                 <button className="bg-e2a748 px-7 py-4 rounded-lg text-white">

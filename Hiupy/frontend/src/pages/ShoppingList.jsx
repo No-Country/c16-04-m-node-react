@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavBar, Footer } from "../components";
 import PropTypes from "prop-types";
 
-export const ListShop = () => {
+export const ShoppingList = () => {
   const [lista, setLista] = useState([]);
   const [nuevoItem, setNuevoItem] = useState("");
 

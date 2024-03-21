@@ -41,7 +41,7 @@ const RecipeIngredientsContextProvider = ({ children }) => {
 
 
     // console.log(data);
-    console.log("esto es recipeId en CONTEXT", recipeId);
+    // console.log("esto es recipeId en CONTEXT", recipeId);
 
     const values = {
         data,

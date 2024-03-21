@@ -5,7 +5,7 @@ import InventoryContext from "../../context/Inventory/InventoryContext";
 //Componente reutilizable que se encarga de renderizar el producto en inventario
 export const Product = ({ product }) => {
     const { deleteProd } = useContext(InventoryContext);
-    console.log(product)
+    // console.log(product)
     const toDeleteId = product.productinvId;
 
     const [color, setColor] = useState("");
@@ -13,19 +13,19 @@ export const Product = ({ product }) => {
     const setLocationColor = () => {
         if (product.location === "freezer") {
             setColor("blue");
-            console.log(color);
+        // console.log(color);
         }
         if (product.location === "heladera") {
             setColor("green");
-            console.log(color);
+        // console.log(color);
         }
         if (product.location === "alacena") {
             setColor("yellow");
-            console.log(color);
+        // console.log(color);
         }
         if (product.location === "huerta") {
             setColor("brown");
-            console.log(color);
+        // console.log(color);
         }
     };
 
