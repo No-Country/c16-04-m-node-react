@@ -1,15 +1,21 @@
 import {useState} from 'react'
 import ShoppingContext from './ShoppingContext'
 
-export const ShoppingContextProvider = ({children}) => {
+const ShoppingContextProvider = ({children}) => {
 
-const [list, setList] = useState([])
+const [list, setList] = useState([
+    {
+        product_name: "cafe",
+        product_unit: "gramos",
+        quantity: "250",
+    }
+])
 
 
 
 const addOnClick = () => {
     const newList = ""
-    setList(newList)
+    setList([...list, newList])
 }
 
 
@@ -23,3 +29,5 @@ const values = {
     </ShoppingContext.Provider>
   )
 }
+
+export default ShoppingContextProvider
