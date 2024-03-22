@@ -64,7 +64,7 @@ export const RecipesCard = () => {
                                     Ingredientes
                                 </h3>
                                 {!loading && !error && recipeIngredients
-                                    ? recipeIngredients.prodRec.map((item) => {
+                                    ? recipeIngredients.productosRecipe.map((item) => {
                                           {
                                               /* console.log(
                                               "esto es item",

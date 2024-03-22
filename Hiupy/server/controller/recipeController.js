@@ -31,43 +31,26 @@ export async function getRecipe(req, res) {
             unit: product.unit_measure,
             id_product_inventory: product.id_products_inventory}))
             console.log(productData)
-
-
-
             
             const prodRec = await Products.findAll({
                 where: {id_product: productData.map(product => product.id_products)},
                 
             })
 
-
-            //agrega la cantidad a la respuesta
-            const Quant = prodRec.map(product => {
+            //agrega las unidades y cantidad a la respuesta
+            const productosRecipe = prodRec.map(product => {
                 const matchingProduct = prodRecipe.find(data => data.id_product === product.id_product);
                 return {
                     ...product.toJSON(),
-                    quantity: matchingProduct ? matchingProduct.quantity : null // Agregar la cantidad del producto si está disponible, de lo contrario null
-                };
-            });
-
-
-            //agrega las unidades a la respuesta
-            const Unit = prodRec.map(product => {
-                const matchingProduct = prodRecipe.find(data => data.id_product === product.id_product);
-                return {
-                    ...product.toJSON(),
-                    Unit: matchingProduct ? matchingProduct.unit : null // Agregar la cantidad del producto si está disponible, de lo contrario null
+                    unit: matchingProduct ? matchingProduct.unit_measure : null,
+                    quantity: matchingProduct ? matchingProduct.quantity : null// Agregar la cantidad del producto si está disponible, de lo contrario null
                 };
             });
 
 
             
 
-            const response = {recipe, prodRec, Quant, Unit}
-
-
-
-
+            const response = {recipe, productosRecipe}
 
 
         res.json(response);
@@ -76,6 +59,3 @@ export async function getRecipe(req, res) {
         res.status(500).json({ message: 'Error al obtener recetas' });
     }
 }
-
-
-
