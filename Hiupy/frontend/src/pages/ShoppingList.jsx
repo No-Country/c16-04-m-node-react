@@ -1,13 +1,10 @@
 import { useContext } from "react";
-import { NavBar, Footer, Product } from "../components";
+import { NavBar, Footer } from "../components";
 import ShoppingContext from "../context/Shopping/ShoppingContext";
-
+import { ProductShopping } from "../components/Product/ProductShoppin";
 
 export const ShoppingList = () => {
-
-    const { list } = useContext(ShoppingContext)
-    
-   
+    const { list } = useContext(ShoppingContext);
 
     return (
         <div>
@@ -16,15 +13,12 @@ export const ShoppingList = () => {
                 Lista de compras
             </h2>
             <div className="flex flex-col min-h-screen gap-6 my-9 w-11/12 mx-auto">
-             { list.length > 1 && list.map((producto, index) => (
-                console.log("console log en ShoppingList", list),
-                          <Product
-                              key={index}
-                              product={producto}
-                          />
-                      ))
-                    
-                      }
+                {list &&
+                    list.map(
+                        (producto, index) => (
+                            (<ProductShopping key={index} product={producto} />)
+                        )
+                    )}
             </div>
             <Footer />
         </div>

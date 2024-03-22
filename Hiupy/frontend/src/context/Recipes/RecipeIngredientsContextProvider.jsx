@@ -21,7 +21,7 @@ const RecipeIngredientsContextProvider = ({ children }) => {
         const newRecipeId = await recipeId;
         if (newRecipeId) {
             try {
-              const response = await fetch(`http://localhost:3000/api/recipes/${recipeId}`);
+              const response = await fetch(`https://c16-04-m-node-react.onrender.com/api/recipes/${recipeId}`);
               if (!response.ok) {
                 throw new Error(`Error fetching data: ${response.statusText}`);
               }
@@ -37,10 +37,7 @@ const RecipeIngredientsContextProvider = ({ children }) => {
         fetchRecipeById()
      },[recipeId])
     
-    
-
-
-    console.log(data);
+    // console.log(data);
     // console.log("esto es recipeId en CONTEXT", recipeId);
 
     const values = {

@@ -1,15 +1,16 @@
 import { useContext, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { NavBar, Footer } from "../../components";
+import { NavBar, Footer, DeleteProdButton } from "../../components";
 import RecipesContext from "../../context/Recipes/RecipesContext";
 import RecipeIngredientsContext from "../../context/Recipes/RecipeIngredientsContext";
 import InventoryContext from "../../context/Inventory/InventoryContext";
 import ShoppingContext from "../../context/Shopping/ShoppingContext";
+import { AddAll } from "../../components/Buttons/AddAll";
 
 export const RecipesCard = () => {
     const { id_recipe } = useParams();
 
-    const { addOnClick } = useContext(ShoppingContext);
+    const { addAllOnClick } = useContext(ShoppingContext);
 
     const {
         data: recipeIngredients,
@@ -21,36 +22,53 @@ export const RecipesCard = () => {
     const { data: recipesData } = useContext(RecipesContext);
     const { updatedData, getProductByName } = useContext(InventoryContext);
     // console.log(recipeIngredients)
-    // console.log(id_recipe);
-    // console.log("consoleLog en recipeCard", recipeIngredients);
+    // console.log("esto es id_recipe en RecipesCard", id_recipe);
+    // console.log("consoleLog en recipeCard", recipeIngredients.productosRecipe);
 
     //Llamo a getId pasandole id_recipe, el cual actualiza el estado
     useEffect(() => {
         getId(id_recipe);
-    }, [id_recipe]);
+    }, [getId, id_recipe]);
 
     // console.log("inventoryData", updatedData);
     //Busco la receta que coincida con el id que me traigo de la url con useParams
     const selectedRecipe = recipesData.find(
         (recipe) => recipe.id_recipe === parseInt(id_recipe)
     );
-
-    const toFilter = recipeIngredients
-    console.log(toFilter.productosRecipe)
     
-    // //Metodo que se encarga de filtrar el total de ingredientes que no se encuentren en inventario
-    // const toAddIngredients = toFilter.productosRecipe.map((ingredient) => {
-    //     const productName = ingredient.product_name.toLowerCase().trim();
-    //     const filter = getProductByName(productName);
-    //     if (!filter) {
-    //        return ingredient;
-    //     } else {
-    //         return null
-    //     }
-    // }).filter((ingredient)=> ingredient !== null)
+    
+    const newRecipeIngredients = () =>{
+        let toAddList
+        if (recipeIngredients && recipeIngredients.productosRecipe !== null) {
 
-    // console.log("toAddIngredients", toAddIngredients)
-        
+            toAddList = recipeIngredients.productosRecipe.map((ingredient) => {
+            const productName = ingredient.product_name.toLowerCase().trim();
+            const filter = getProductByName(productName);
+            if (!filter) {
+            // console.log("Ingredient en newRecipeIngredients",ingredient)
+            return ingredient;
+            } else {
+                return null
+            }
+        }).filter((ingredient)=> ingredient !== null)
+    }
+    return toAddList
+    }
+    
+    const handleAddAll = async () => {
+        try {
+          const newItems = await newRecipeIngredients();
+          if (newItems) {
+            // console.log("entra en try", newItems)
+            addAllOnClick(newItems);
+          }
+        } catch (error) {
+          console.error("Error", error);
+        } 
+      };
+    
+
+    // console.log("toAddList?", newRecipeIngredients())
 
     return (
         <>
@@ -101,8 +119,19 @@ export const RecipesCard = () => {
                                                                   item.product_name
                                                               }
                                                           </p>
+                                                          <p className="w-8/12">
+                                                              {
+                                                                  item.quantity
+                                                              }
+                                                          </p>
+                                                          <p className="w-8/12">
+                                                              {
+                                                                  item.unit
+                                                              }
+                                                          </p>
+                                                         
                                                           {/* Agrega item faltante a lista de compras */}
-                                                          {!byName && (
+                                                          {/* {!byName && (
                                                               <button
                                                                   className="
                                                                   text-[16px] font-bold w-6 h-6 rounded-full border text-botones border-botones"
@@ -114,7 +143,7 @@ export const RecipesCard = () => {
                                                               >
                                                                   +
                                                               </button>
-                                                          )}
+                                                          )} */}
 
                                                           <input
                                                               type="checkbox"
@@ -152,18 +181,7 @@ export const RecipesCard = () => {
                                       )} */}
                             </ul>
 
-                            <NavLink
-                                to="/Shopping"
-                                className="item-center text-center mt-8"
-                            >
-                                {/* Agrega todos los items faltantes a lista de compras */}
-                                <button
-                                    className="bg-e2a748 px-2 py-4 rounded-xl w-2/3 text-white"
-                                    onClick
-                                >
-                                    Lista de compras
-                                </button>
-                            </NavLink>
+                            <AddAll onClick={handleAddAll}/>
                         </>
                     )}
                 </div>
