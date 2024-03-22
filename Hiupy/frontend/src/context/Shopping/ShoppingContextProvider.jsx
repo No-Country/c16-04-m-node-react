@@ -1,24 +1,23 @@
-import {useState} from 'react'
+import { useEffect, useState} from 'react'
 import ShoppingContext from './ShoppingContext'
 
 const ShoppingContextProvider = ({children}) => {
 
-const [list, setList] = useState([
-    {
-        product_name: "cafe",
-        product_unit: "gramos",
-        quantity: "250",
-    }
-])
+const [list, setList] = useState([])
 
 
 
-const addOnClick = () => {
-    const newList = ""
-    setList([...list, newList])
+const addOnClick = (productName) => {
+    const newItem = {product_name:productName}
+    setList([...list, { newItem }])
+    console.log("console log en addOnClick",list)
 }
 
 
+    useEffect(()=>{
+        addOnClick()
+    },[])
+    
 const values = {
     list,
     addOnClick

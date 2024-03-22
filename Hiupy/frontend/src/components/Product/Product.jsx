@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { InventoryCounter, DeleteProdButton } from "../../components";
-import InventoryContext from "../../context/Inventory/InventoryContext";
+// import InventoryContext from "../../context/Inventory/InventoryContext";
 
 //Componente reutilizable que se encarga de renderizar el producto en inventario
 export const Product = ({ product }) => {
-    const { deleteProd } = useContext(InventoryContext);
-    // console.log(product)
-    const toDeleteId = product.productinvId;
+    // const { deleteProd } = useContext(InventoryContext);
+    // // console.log(product)
+    // const toDeleteId = product.productinvId;
 
     const [color, setColor] = useState("");
 
@@ -47,10 +47,10 @@ export const Product = ({ product }) => {
         >
             {/* <p>{product.img_url}</p> */}
             <p className="w-5/12">{product.product_name}</p>
-            <div className="flex gap-3 m-none items-center justify-center">
+            <div className="flex m-none items-center justify-center">
                 <InventoryCounter quantity={product.quantity} />
                 <p className="text-1xs mr-6">{product.unit}</p>
-                <DeleteProdButton onClick={() => deleteProd(toDeleteId)} />
+                {/* <DeleteProdButton onClick={() => deleteProd(toDeleteId)} /> */}
             </div>
         </div>
     );

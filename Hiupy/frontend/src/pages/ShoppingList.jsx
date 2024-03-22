@@ -4,8 +4,10 @@ import ShoppingContext from "../context/Shopping/ShoppingContext";
 
 
 export const ShoppingList = () => {
-  const { list } = useContext(ShoppingContext)
-  console.log(list)
+
+    const { list } = useContext(ShoppingContext)
+    
+   
 
     return (
         <div>
@@ -14,7 +16,8 @@ export const ShoppingList = () => {
                 Lista de compras
             </h2>
             <div className="flex flex-col min-h-screen gap-6 my-9 w-11/12 mx-auto">
-            { list && list.map((producto, index) => (
+             { list.length > 1 && list.map((producto, index) => (
+                console.log("console log en ShoppingList", list),
                           <Product
                               key={index}
                               product={producto}
