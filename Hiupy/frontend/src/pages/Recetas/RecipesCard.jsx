@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
-import { NavLink, useParams } from "react-router-dom";
-import { NavBar, Footer, DeleteProdButton } from "../../components";
+import { useParams } from "react-router-dom";
+import { NavBar, Footer } from "../../components";
 import RecipesContext from "../../context/Recipes/RecipesContext";
 import RecipeIngredientsContext from "../../context/Recipes/RecipeIngredientsContext";
 import InventoryContext from "../../context/Inventory/InventoryContext";
@@ -99,35 +99,7 @@ export const RecipesCard = () => {
                                 <h3 className="font-semibold text-base underline">
                                     Ingredientes
                                 </h3>
-                                {!loading && !error && recipeIngredients
-                                    ? recipeIngredients.productosRecipe.map((item) => {
-                                          {
-                                              /* console.log(
-                                              "esto es item",
-                                              item.id_product,
-                                              item.product_name.toLowerCase()
-                                            */
-                                          }
-                                          const byName = getProductByName(
-                                              item.product_name
-                                                  .toLowerCase()
-                                                  .trim()
-                                          )
-                                          return (
-                                              <li
-                                                  className="flex justify-between"
-                                                  key={item.id_product}
-                                              >
-                                                  <label>
-                                                      {item.product_name}
-                                                  </label>
-                                                  <input
-                                                      type="checkbox"
-                                                      className="checked:bg-green-400 rounded-xl"
-                                                      checked={byName}
-                                                      disabled={!byName}
-                                                  />
-                                              </li>
+                
                                 <div className="flex flex-col gap-5">
                                     {!loading && !error && recipeIngredients
                                         ? recipeIngredients.productosRecipe.map(
@@ -210,7 +182,7 @@ export const RecipesCard = () => {
                                       )} */}
                             </ul>
 
-                            <AddAll onClick={handleAddAll}/>
+                            <AddAll onClick={handleAddAll} />
                         </>
                     )}
                 </div>
