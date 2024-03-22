@@ -22,7 +22,7 @@ const InventoryContextProvider = ({ children }) => {
         const freezer = updatedData.filter(
             (producto) => producto.location === "freezer"
         );
-        console.log("Acá se ejecutó getProductosCongelador");
+        // console.log("Acá se ejecutó getProductosCongelador");
         return freezer;
     };
 
@@ -31,7 +31,7 @@ const InventoryContextProvider = ({ children }) => {
         const frescos = updatedData.filter(
             (producto) => producto.location === "heladera"
         );
-        console.log("Acá se ejecutó getProductosFrescos");
+        // console.log("Acá se ejecutó getProductosFrescos");
         return frescos;
     };
 
@@ -40,7 +40,7 @@ const InventoryContextProvider = ({ children }) => {
         const alacena = updatedData.filter(
             (producto) => producto.location === "alacena"
         );
-        console.log("Acá se ejecutó getProductosSecos");
+        // console.log("Acá se ejecutó getProductosSecos");
         return alacena;
     };
 
@@ -49,7 +49,7 @@ const InventoryContextProvider = ({ children }) => {
         const huerta = updatedData.filter(
             (producto) => producto.location === "huerta"
         );
-        console.log("Acá se ejecutó getProductosHuerta");
+        // console.log("Acá se ejecutó getProductosHuerta");
         return huerta;
     };
 

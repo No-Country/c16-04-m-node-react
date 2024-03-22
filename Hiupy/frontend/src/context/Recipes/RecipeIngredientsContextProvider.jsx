@@ -37,9 +37,6 @@ const RecipeIngredientsContextProvider = ({ children }) => {
         fetchRecipeById()
      },[recipeId])
     
-    
-
-
     // console.log(data);
     // console.log("esto es recipeId en CONTEXT", recipeId);
 

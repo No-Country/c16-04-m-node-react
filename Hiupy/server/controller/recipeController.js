@@ -9,53 +9,51 @@ export async function getAllRecipes(req, res) {
         const recipes = await Recipe.findAll();
         res.json(recipes);
     } catch (error) {
-        console.error('Error al obtener recetas:', error);
-        res.status(500).json({ message: 'Error al obtener recetas' });
+        console.error("Error al obtener recetas:", error);
+        res.status(500).json({ message: "Error al obtener recetas" });
     }
 }
 
 export async function getRecipe(req, res) {
-    const {id} = req.params;
+    const { id } = req.params;
 
     try {
-        
         const recipe = await Recipe.findByPk(id);
         const prodRecipe = await ProductRecipes.findAll({
-            where: {id_recipe : id}
-        })
+            where: { id_recipe: id },
+        });
 
-        
-        const productData = prodRecipe.map(product => ({ 
+        const productData = prodRecipe.map((product) => ({
             id_products: product.id_product,
             quantity: product.quantity,
             unit: product.unit_measure,
-            id_product_inventory: product.id_products_inventory}))
-            console.log(productData)
-            
-            const prodRec = await Products.findAll({
-                where: {id_product: productData.map(product => product.id_products)},
-                
-            })
+            id_product_inventory: product.id_products_inventory,
+        }));
+        console.log(productData);
 
-            //agrega las unidades y cantidad a la respuesta
-            const productosRecipe = prodRec.map(product => {
-                const matchingProduct = prodRecipe.find(data => data.id_product === product.id_product);
-                return {
-                    ...product.toJSON(),
-                    unit: matchingProduct ? matchingProduct.unit_measure : null,
-                    quantity: matchingProduct ? matchingProduct.quantity : null// Agregar la cantidad del producto si está disponible, de lo contrario null
-                };
-            });
+        const prodRec = await Products.findAll({
+            where: {
+                id_product: productData.map((product) => product.id_products),
+            },
+        });
 
+        //agrega las unidades y cantidad a la respuesta
+        const productosRecipe = prodRec.map((product) => {
+            const matchingProduct = prodRecipe.find(
+                (data) => data.id_product === product.id_product
+            );
+            return {
+                ...product.toJSON(),
+                unit: matchingProduct ? matchingProduct.unit_measure : null,
+                quantity: matchingProduct ? matchingProduct.quantity : null, // Agregar la cantidad del producto si está disponible, de lo contrario null
+            };
+        });
 
-            
-
-            const response = {recipe, productosRecipe}
-
+        const response = { recipe, productosRecipe };
 
         res.json(response);
     } catch (error) {
-        console.error('Error al obtener recetas:', error);
-        res.status(500).json({ message: 'Error al obtener recetas' });
+        console.error("Error al obtener recetas:", error);
+        res.status(500).json({ message: "Error al obtener recetas" });
     }
 }
