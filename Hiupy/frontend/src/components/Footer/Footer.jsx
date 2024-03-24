@@ -2,13 +2,13 @@ import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
     return (
-        <div className="w-full md:fixed lg:fixed bottom-0 mx-auto">
+        <div className="w-full md:fixed lg:fixed max-h-[370px] bottom-0 mx-auto">
             <div className="flex flex-col md:grid grid-rows-2 grid-cols-2 justify-between lg:flex lg:flex-row gap-y-10 w-full md:w-11/12 lg:w-3/4 mx-auto bg-white">
-                <div className="flex flex-col col-start-1 row-span-1 items-center lg:items-start lg:order-first gap-y-3">
+                 <div className="flex flex-col col-start-1 row-span-1 items-center lg:items-start lg:order-first gap-y-3">
                     <h2 className="text-base mb-4 border-b-4 border-botones font-bold">
                         Explorar
                     </h2>
-                    <ul>
+                    <ul className="flex flex-col items-center md:items-start">
                         <li>
                             <NavLink to="/Home" className=" text-xs">
                                 Inicio
@@ -36,7 +36,7 @@ export const Footer = () => {
                     <h2 className="text-base mb-4 border-b-4 border-botones font-bold max-w-20">
                         Contacto
                     </h2>
-                    <ul>
+                    <ul className="flex flex-col items-center md:items-start">
                         <li>
                             <a href="#" className=" text-xs">
                                 +54 11 30962378

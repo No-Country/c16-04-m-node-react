@@ -13,7 +13,7 @@ export const Home = () => {
                     ¿Cómo vamos a alimentarnos?
                 </span>
             </div>
-            <div className="flex flex-col gap-8 pb-20 w-11/12 md:w-7/12 lg:w-6/12 xl:w-4/12 mx-auto h-screen justify-center ">
+            <div className="flex flex-col gap-8 pb-20 w-11/12 md:w-7/12 lg:w-6/12 xl:w-4/12 mx-auto h-[80vh] justify-center ">
                 <Boton
                     texto="Preparar o planificar nuestra comida"
                     etiqueta="Cocinar"
@@ -35,29 +35,6 @@ export const Home = () => {
                     ruta="/Shopping"
                 />
             </div>
-
-            {/* <SearchBar placeholder={"Buscar ingredientes"} /> */}
-
-            {/* {/* <div className="w-3/4 h-full mx-auto">
-                        <Carousel
-                            onSlideChange={(index) =>
-                                console.log("onSlideChange()", index)
-                            }
-                        >
-                            <div className="flex flex-col items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
-                                <img src="/public/assets/images/food-example.png" />{" "}
-                                Slide 1
-                            </div>
-                            <div className="flex flex-col items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
-                                <img src="/public/assets/images/food-example.png" />{" "}
-                                Slide 2
-                            </div>
-                            <div className="flex flex-col items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
-                                <img src="/public/assets/images/food-example.png" />{" "}
-                                Slide 3
-                            </div>
-                        </Carousel> 
-                    </div> */}
             <Footer />
         </>
     );

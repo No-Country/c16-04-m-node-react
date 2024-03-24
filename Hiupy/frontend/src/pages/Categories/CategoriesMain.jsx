@@ -8,10 +8,10 @@ export const CategoriesMain = () => {
             <h3 className="m-2 text-center py-4 text-xl font-bold ">
                 Agrega a tu inventario los ingredientes que tienes en tu casa
             </h3>
-            <div className="wrapper flex flex-col justify-center items-center md:h-[450px]">
-                <div className="flex flex-col md:grid grid-cols-2 grid-row-3 gap-8 items-center mx-auto w-11/12 text-center lg:gap-0">
+            <div className="wrapper flex flex-col justify-center items-center mb-6 md:h-[450px] lg:w-7/12 2xl:w-4/12 2xl:mt-28 mx-auto">
+                <div className="relative flex flex-col md:grid grid-cols-2 grid-row-3 gap-8 items-center mx-auto w-11/12 text-center lg:gap-0">
                     <NavLink
-                        className="col-start-1 col-span-1 flex flex-col justify-center mx-auto lg:ml-48"
+                        className="col-start-1 col-span-1 flex flex-col justify-center mx-auto"
                         to="/Congelados"
                     >
                         <h3 className="text-center text-sm">
@@ -79,12 +79,12 @@ export const CategoriesMain = () => {
                         Todos los productos
                     </h3> */}
                         {/* Versión alternativa */}
-                        <h3 className="text-center text-white text-md bg-botones py-3 px-8 rounded-3xl lg:mt-6 lg:w-6/12 mx-auto">
+                        <h3 className="text-center text-white text-md bg-botones py-3 px-8 rounded-3xl md:mt-12 lg:w-6/12 mx-auto">
                             Todos los productos
                         </h3>
                     </NavLink>
 
-                    <div className="relative">
+                    <div className="absolute bottom-0 right-0">
                         <AddProdButton />
                     </div>
                 </div>

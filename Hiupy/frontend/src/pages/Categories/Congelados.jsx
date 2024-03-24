@@ -13,7 +13,7 @@ export const Congelados = () => {
             <h2 className="text-md mt-4 text-center font-semibold">
                 Alimentos Congelados
             </h2>
-            <div className="flex flex-col min-h-screen gap-6 my-9 w-11/12 mx-auto">
+            <div className="relative flex flex-col h-[50vh] gap-6 my-9 w-11/12 md:w-5/12 lg:w-4/12 xl:w-3/12 mt-10 lg:mt-24 mx-auto">
                 {!loading & !error
                     ? productosCongelador.map((producto) => (
                           <Product
@@ -28,9 +28,9 @@ export const Congelados = () => {
                               </h2>
                           </>
                       )}
-            </div>
-            <div className="relative">
+            <div className="absolute bottom-0 right-0">
                 <AddProdButton />
+            </div>
             </div>
 
             <Footer />
