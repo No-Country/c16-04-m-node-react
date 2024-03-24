@@ -21,9 +21,10 @@ export const RecipesContainer = () => {
                     Estas son las recetas sugeridas con los ingredientes que
                     tenés en casa
                 </h2>
-                <SearchBar placeholder={"Busca mas recetas"} />
+                {/* No funciona */}
+                {/* <SearchBar placeholder={"Busca mas recetas"} /> */}
             </div>
-            <div className="grid grid-cols-2 md:w-8/12 xl:flex flex-row gap-2 xl:gap-8 p-4 mx-auto">
+            <div className="grid grid-cols-2 md:w-8/12 xl:flex flex-row xl:justify-evenly gap-2 xl:gap-8 p-4 mx-auto">
                 {!loading && !error
                     ? data.map((item) => (
                           <Link
